@@ -1,3 +1,12 @@
 web_service_homepage:
     path:     /
     defaults: { _controller: WebServiceBundle:Default:index }
+
+web_service_a:
+    path:     /
+    defaults: { _controller: WebServiceBundle:Default:index }
+
+web_service_homepage:
+    path:     /
+    defaults: { _controller: WebServiceBundle:Default:index }
+

@@ -4,11 +4,11 @@ front_office:
 
 web_service:
     resource: "@WebServiceBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /api
 
 back_office:
     resource: "@BackOfficeBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /admindep
 
 app:
     resource: "@AppBundle/Controller/"

@@ -109,22 +109,37 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'FrontOfficeBundle\\Controller\\DefaultController::indexAction',  '_route' => 'front_office_homepage',);
         }
 
-        // web_service_homepage
-        if (rtrim($pathinfo, '/') === '') {
-            if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'web_service_homepage');
+        if (0 === strpos($pathinfo, '/a')) {
+            if (0 === strpos($pathinfo, '/api')) {
+                // web_service_homepage
+                if (rtrim($pathinfo, '/') === '/api') {
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($pathinfo.'/', 'web_service_homepage');
+                    }
+
+                    return array (  '_controller' => 'WebServiceBundle:Default:index',  '_route' => 'web_service_homepage',);
+                }
+
+                // web_service_a
+                if (rtrim($pathinfo, '/') === '/api') {
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($pathinfo.'/', 'web_service_a');
+                    }
+
+                    return array (  '_controller' => 'WebServiceBundle:Default:index',  '_route' => 'web_service_a',);
+                }
+
             }
 
-            return array (  '_controller' => 'WebServiceBundle\\Controller\\DefaultController::indexAction',  '_route' => 'web_service_homepage',);
-        }
+            // back_office_homepage
+            if (rtrim($pathinfo, '/') === '/admin') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'back_office_homepage');
+                }
 
-        // back_office_homepage
-        if (rtrim($pathinfo, '/') === '') {
-            if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'back_office_homepage');
+                return array (  '_controller' => 'BackOfficeBundle\\Controller\\DefaultController::indexAction',  '_route' => 'back_office_homepage',);
             }
 
-            return array (  '_controller' => 'BackOfficeBundle\\Controller\\DefaultController::indexAction',  '_route' => 'back_office_homepage',);
         }
 
         // homepage
