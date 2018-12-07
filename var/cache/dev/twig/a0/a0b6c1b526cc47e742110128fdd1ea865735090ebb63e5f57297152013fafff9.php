@@ -15,8 +15,8 @@ class __TwigTemplate_7723c6e8f33f077aafa8edcfe9a4562a26b0f1f0a396bcd5fd121055fd8
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_8395d55971ba41ab2234956168d8c89e4db1216f55134fab5aca47866c9ac6e5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_8395d55971ba41ab2234956168d8c89e4db1216f55134fab5aca47866c9ac6e5->enter($__internal_8395d55971ba41ab2234956168d8c89e4db1216f55134fab5aca47866c9ac6e5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Icon/logger.svg"));
+        $__internal_99cbdb3c707d27be37d18c8cd7b115f060d8145c918ca37bf92ba5a34459a7e8 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_99cbdb3c707d27be37d18c8cd7b115f060d8145c918ca37bf92ba5a34459a7e8->enter($__internal_99cbdb3c707d27be37d18c8cd7b115f060d8145c918ca37bf92ba5a34459a7e8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Icon/logger.svg"));
 
         // line 1
         echo "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" x=\"0px\" y=\"0px\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" enable-background=\"new 0 0 24 24\" xml:space=\"preserve\">
@@ -28,7 +28,7 @@ class __TwigTemplate_7723c6e8f33f077aafa8edcfe9a4562a26b0f1f0a396bcd5fd121055fd8
 </svg>
 ";
         
-        $__internal_8395d55971ba41ab2234956168d8c89e4db1216f55134fab5aca47866c9ac6e5->leave($__internal_8395d55971ba41ab2234956168d8c89e4db1216f55134fab5aca47866c9ac6e5_prof);
+        $__internal_99cbdb3c707d27be37d18c8cd7b115f060d8145c918ca37bf92ba5a34459a7e8->leave($__internal_99cbdb3c707d27be37d18c8cd7b115f060d8145c918ca37bf92ba5a34459a7e8_prof);
 
     }
 
@@ -59,6 +59,6 @@ class __TwigTemplate_7723c6e8f33f077aafa8edcfe9a4562a26b0f1f0a396bcd5fd121055fd8
     C9.3,4,9,4.3,9,4.6V11.4z M9,16.4C9,16.7,9.3,17,9.6,17h1.8c0.3,0,0.6-0.3,0.6-0.6v-1.8c0-0.3-0.3-0.6-0.6-0.6H9.6
     C9.3,14,9,14.3,9,14.6V16.4z\"/>
 </svg>
-", "@WebProfiler/Icon/logger.svg", "/home/etdfrm1/www/symfony/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Icon/logger.svg");
+", "@WebProfiler/Icon/logger.svg", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Icon/logger.svg");
     }
 }

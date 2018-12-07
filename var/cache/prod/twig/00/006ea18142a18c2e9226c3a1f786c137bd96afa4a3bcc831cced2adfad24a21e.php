@@ -142,6 +142,6 @@ class __TwigTemplate_ae8039dcb970cd62bbaea5dd706ede7b47a21b0e797bf166bde163370aa
 
     public function getSourceContext()
     {
-        return new Twig_Source("", ":default:index.html.twig", "/home/etdfrm1/www/symfony/app/Resources/views/default/index.html.twig");
+        return new Twig_Source("", ":default:index.html.twig", "/var/www/html/symfony/app/Resources/views/default/index.html.twig");
     }
 }

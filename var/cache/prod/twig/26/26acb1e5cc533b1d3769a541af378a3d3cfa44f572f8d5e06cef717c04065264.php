@@ -65,6 +65,6 @@ class __TwigTemplate_f6588887b950fefd74b3ca6d136ef436871fed72994feadeeb46e2e1d8c
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "TwigBundle:Exception:traces.xml.twig", "/home/etdfrm1/www/symfony/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/traces.xml.twig");
+        return new Twig_Source("", "TwigBundle:Exception:traces.xml.twig", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/traces.xml.twig");
     }
 }

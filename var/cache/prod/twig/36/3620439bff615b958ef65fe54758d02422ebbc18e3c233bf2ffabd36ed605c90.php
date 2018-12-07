@@ -47,6 +47,6 @@ class __TwigTemplate_e1fd2a518bed61b8175bf21f5f480e9896a42c5d30cead3b6f8b561e108
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Framework/Form/money_widget.html.php", "/home/etdfrm1/www/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/money_widget.html.php");
+        return new Twig_Source("", "@Framework/Form/money_widget.html.php", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/money_widget.html.php");
     }
 }

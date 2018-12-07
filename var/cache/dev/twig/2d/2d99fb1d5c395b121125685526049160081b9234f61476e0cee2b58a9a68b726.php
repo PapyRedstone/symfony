@@ -15,8 +15,8 @@ class __TwigTemplate_f5a196df2e5708557a5e7834275555f40ae4fddc3fe4fd62de61dfe3d42
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_320c885c0f1b77ce473f461d1959d745da18ddd8057c5e213c96e014f045428a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_320c885c0f1b77ce473f461d1959d745da18ddd8057c5e213c96e014f045428a->enter($__internal_320c885c0f1b77ce473f461d1959d745da18ddd8057c5e213c96e014f045428a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:error.js.twig"));
+        $__internal_fed01964a1ccf5bbccdff6ecfb18ebf951b5a96fa7585c9ab11a94beb3f54670 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_fed01964a1ccf5bbccdff6ecfb18ebf951b5a96fa7585c9ab11a94beb3f54670->enter($__internal_fed01964a1ccf5bbccdff6ecfb18ebf951b5a96fa7585c9ab11a94beb3f54670_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:error.js.twig"));
 
         // line 1
         echo "/*
@@ -30,7 +30,7 @@ class __TwigTemplate_f5a196df2e5708557a5e7834275555f40ae4fddc3fe4fd62de61dfe3d42
 */
 ";
         
-        $__internal_320c885c0f1b77ce473f461d1959d745da18ddd8057c5e213c96e014f045428a->leave($__internal_320c885c0f1b77ce473f461d1959d745da18ddd8057c5e213c96e014f045428a_prof);
+        $__internal_fed01964a1ccf5bbccdff6ecfb18ebf951b5a96fa7585c9ab11a94beb3f54670->leave($__internal_fed01964a1ccf5bbccdff6ecfb18ebf951b5a96fa7585c9ab11a94beb3f54670_prof);
 
     }
 
@@ -63,6 +63,6 @@ class __TwigTemplate_f5a196df2e5708557a5e7834275555f40ae4fddc3fe4fd62de61dfe3d42
 {{ status_code }} {{ status_text }}
 
 */
-", "TwigBundle:Exception:error.js.twig", "/home/etdfrm1/www/symfony/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.js.twig");
+", "TwigBundle:Exception:error.js.twig", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.js.twig");
     }
 }

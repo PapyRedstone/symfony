@@ -42,6 +42,6 @@ class __TwigTemplate_3db3349216181cce68b85adcb48261abc7ed7ca384decf49fa7168aca2b
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Swiftmailer/Collector/icon.svg", "/home/etdfrm1/www/symfony/vendor/symfony/swiftmailer-bundle/Resources/views/Collector/icon.svg");
+        return new Twig_Source("", "@Swiftmailer/Collector/icon.svg", "/var/www/html/symfony/vendor/symfony/swiftmailer-bundle/Resources/views/Collector/icon.svg");
     }
 }

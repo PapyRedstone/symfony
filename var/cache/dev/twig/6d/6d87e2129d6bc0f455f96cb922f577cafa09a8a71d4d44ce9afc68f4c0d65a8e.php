@@ -15,8 +15,8 @@ class __TwigTemplate_232f57b6418455e7247d3026d2e2b82611a6cc598ded955fa2d365eaaaf
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_7b0c20d4dc9af566f2a0af845457da9b724196313610c78c669b128459809c36 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_7b0c20d4dc9af566f2a0af845457da9b724196313610c78c669b128459809c36->enter($__internal_7b0c20d4dc9af566f2a0af845457da9b724196313610c78c669b128459809c36_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Security/Collector/icon.svg"));
+        $__internal_cca3366897d82333896cc4bdf6f04efb5c95cfbee1645be278aa7112bd37c925 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_cca3366897d82333896cc4bdf6f04efb5c95cfbee1645be278aa7112bd37c925->enter($__internal_cca3366897d82333896cc4bdf6f04efb5c95cfbee1645be278aa7112bd37c925_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Security/Collector/icon.svg"));
 
         // line 1
         echo "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" x=\"0px\" y=\"0px\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" enable-background=\"new 0 0 24 24\" xml:space=\"preserve\">
@@ -24,7 +24,7 @@ class __TwigTemplate_232f57b6418455e7247d3026d2e2b82611a6cc598ded955fa2d365eaaaf
 </svg>
 ";
         
-        $__internal_7b0c20d4dc9af566f2a0af845457da9b724196313610c78c669b128459809c36->leave($__internal_7b0c20d4dc9af566f2a0af845457da9b724196313610c78c669b128459809c36_prof);
+        $__internal_cca3366897d82333896cc4bdf6f04efb5c95cfbee1645be278aa7112bd37c925->leave($__internal_cca3366897d82333896cc4bdf6f04efb5c95cfbee1645be278aa7112bd37c925_prof);
 
     }
 
@@ -51,6 +51,6 @@ class __TwigTemplate_232f57b6418455e7247d3026d2e2b82611a6cc598ded955fa2d365eaaaf
         return new Twig_Source("<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" x=\"0px\" y=\"0px\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" enable-background=\"new 0 0 24 24\" xml:space=\"preserve\">
     <path fill=\"#AAAAAA\" d=\"M21,20.4V22H3v-1.6c0-3.7,2.4-6.9,5.8-8c-1.7-1.1-2.9-3-2.9-5.2c0-3.4,2.7-6.1,6.1-6.1s6.1,2.7,6.1,6.1c0,2.2-1.2,4.1-2.9,5.2C18.6,13.5,21,16.7,21,20.4z\"/>
 </svg>
-", "@Security/Collector/icon.svg", "/home/etdfrm1/www/symfony/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/views/Collector/icon.svg");
+", "@Security/Collector/icon.svg", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/views/Collector/icon.svg");
     }
 }

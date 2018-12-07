@@ -8,7 +8,7 @@ web_service:
 
 back_office:
     resource: "@BackOfficeBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /admindep/
 
 app:
     resource: "@AppBundle/Controller/"

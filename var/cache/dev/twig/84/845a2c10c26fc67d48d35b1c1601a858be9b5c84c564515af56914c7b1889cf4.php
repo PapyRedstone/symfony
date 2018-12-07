@@ -15,8 +15,8 @@ class __TwigTemplate_531a1ef677a1c3babdebd11bf2bad56cb701566dab006bc7d260107ccaf
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_8142b3c0de2469850104d6ce842661a1891fd3800140fbf5ba75ae438d2f865b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_8142b3c0de2469850104d6ce842661a1891fd3800140fbf5ba75ae438d2f865b->enter($__internal_8142b3c0de2469850104d6ce842661a1891fd3800140fbf5ba75ae438d2f865b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:bag.html.twig"));
+        $__internal_5473e9a80283617cac78639038b13cdff61f001e508aef2947778b250e7ea9ea = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_5473e9a80283617cac78639038b13cdff61f001e508aef2947778b250e7ea9ea->enter($__internal_5473e9a80283617cac78639038b13cdff61f001e508aef2947778b250e7ea9ea_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:bag.html.twig"));
 
         // line 1
         echo "<table class=\"";
@@ -70,7 +70,7 @@ class __TwigTemplate_531a1ef677a1c3babdebd11bf2bad56cb701566dab006bc7d260107ccaf
 </table>
 ";
         
-        $__internal_8142b3c0de2469850104d6ce842661a1891fd3800140fbf5ba75ae438d2f865b->leave($__internal_8142b3c0de2469850104d6ce842661a1891fd3800140fbf5ba75ae438d2f865b_prof);
+        $__internal_5473e9a80283617cac78639038b13cdff61f001e508aef2947778b250e7ea9ea->leave($__internal_5473e9a80283617cac78639038b13cdff61f001e508aef2947778b250e7ea9ea_prof);
 
     }
 
@@ -119,6 +119,6 @@ class __TwigTemplate_531a1ef677a1c3babdebd11bf2bad56cb701566dab006bc7d260107ccaf
         {% endfor %}
     </tbody>
 </table>
-", "WebProfilerBundle:Profiler:bag.html.twig", "/home/etdfrm1/www/symfony/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/bag.html.twig");
+", "WebProfilerBundle:Profiler:bag.html.twig", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/bag.html.twig");
     }
 }

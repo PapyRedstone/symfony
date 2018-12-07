@@ -15,8 +15,8 @@ class __TwigTemplate_f2c68e12239ae1cdbaff98c7b918d8780c5ce60a6fc76611ed2dc09c09b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_69689cb2e262109f9087475f21a87b25549f18d5f2c97ef311824ea49c21a2c3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_69689cb2e262109f9087475f21a87b25549f18d5f2c97ef311824ea49c21a2c3->enter($__internal_69689cb2e262109f9087475f21a87b25549f18d5f2c97ef311824ea49c21a2c3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:error.txt.twig"));
+        $__internal_b0cdf51d48093f7ab86d4845e7e43874a171e78d60cb551331ac018be2389b33 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_b0cdf51d48093f7ab86d4845e7e43874a171e78d60cb551331ac018be2389b33->enter($__internal_b0cdf51d48093f7ab86d4845e7e43874a171e78d60cb551331ac018be2389b33_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:error.txt.twig"));
 
         // line 1
         echo "Oops! An Error Occurred
@@ -33,7 +33,7 @@ Something is broken. Please let us know what you were doing when this error occu
 We will fix it as soon as possible. Sorry for any inconvenience caused.
 ";
         
-        $__internal_69689cb2e262109f9087475f21a87b25549f18d5f2c97ef311824ea49c21a2c3->leave($__internal_69689cb2e262109f9087475f21a87b25549f18d5f2c97ef311824ea49c21a2c3_prof);
+        $__internal_b0cdf51d48093f7ab86d4845e7e43874a171e78d60cb551331ac018be2389b33->leave($__internal_b0cdf51d48093f7ab86d4845e7e43874a171e78d60cb551331ac018be2389b33_prof);
 
     }
 
@@ -69,6 +69,6 @@ The server returned a \"{{ status_code }} {{ status_text }}\".
 
 Something is broken. Please let us know what you were doing when this error occurred.
 We will fix it as soon as possible. Sorry for any inconvenience caused.
-", "TwigBundle:Exception:error.txt.twig", "/home/etdfrm1/www/symfony/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.txt.twig");
+", "TwigBundle:Exception:error.txt.twig", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.txt.twig");
     }
 }

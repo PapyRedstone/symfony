@@ -15,8 +15,8 @@ class __TwigTemplate_7f96c8c0b5a71d441e42d2e8e4f90c4cae319a99b5cda8dbce5216229be
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_1ef6c203c9d86f9192430027b9adce8c989b61c8b6e2e9d393592edb6d742544 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_1ef6c203c9d86f9192430027b9adce8c989b61c8b6e2e9d393592edb6d742544->enter($__internal_1ef6c203c9d86f9192430027b9adce8c989b61c8b6e2e9d393592edb6d742544_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:toolbar.css.twig"));
+        $__internal_aab452fd170934c787ee17a3ccf2f28cd515cfc26375109353d61d2d800dc5ed = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_aab452fd170934c787ee17a3ccf2f28cd515cfc26375109353d61d2d800dc5ed->enter($__internal_aab452fd170934c787ee17a3ccf2f28cd515cfc26375109353d61d2d800dc5ed_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:toolbar.css.twig"));
 
         // line 2
         $context["colors"] = array("success" => "#4F805D", "warning" => "#A46A1F", "error" => "#B0413E");
@@ -555,7 +555,7 @@ class __TwigTemplate_7f96c8c0b5a71d441e42d2e8e4f90c4cae319a99b5cda8dbce5216229be
 }
 ";
         
-        $__internal_1ef6c203c9d86f9192430027b9adce8c989b61c8b6e2e9d393592edb6d742544->leave($__internal_1ef6c203c9d86f9192430027b9adce8c989b61c8b6e2e9d393592edb6d742544_prof);
+        $__internal_aab452fd170934c787ee17a3ccf2f28cd515cfc26375109353d61d2d800dc5ed->leave($__internal_aab452fd170934c787ee17a3ccf2f28cd515cfc26375109353d61d2d800dc5ed_prof);
 
     }
 
@@ -1090,6 +1090,6 @@ class __TwigTemplate_7f96c8c0b5a71d441e42d2e8e4f90c4cae319a99b5cda8dbce5216229be
         display: none;
     }
 }
-", "WebProfilerBundle:Profiler:toolbar.css.twig", "/home/etdfrm1/www/symfony/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/toolbar.css.twig");
+", "WebProfilerBundle:Profiler:toolbar.css.twig", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/toolbar.css.twig");
     }
 }

@@ -40,6 +40,6 @@ class __TwigTemplate_7f57f1f8bcebd7a475dd7b79a70f6e75ac7a64ac4d1ec27896010e4621a
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "FrontOfficeBundle:Default:index.html.twig", "/home/etdfrm1/www/symfony/src/FrontOfficeBundle/Resources/views/Default/index.html.twig");
+        return new Twig_Source("", "FrontOfficeBundle:Default:index.html.twig", "/var/www/html/symfony/src/FrontOfficeBundle/Resources/views/Default/index.html.twig");
     }
 }

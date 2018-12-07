@@ -44,6 +44,6 @@ class __TwigTemplate_fbe8aaf23e77893b00553319b5a4a6b9ca6f293bede0c05c0d3194ed1c4
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Framework/FormTable/hidden_row.html.php", "/home/etdfrm1/www/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/FormTable/hidden_row.html.php");
+        return new Twig_Source("", "@Framework/FormTable/hidden_row.html.php", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/FormTable/hidden_row.html.php");
     }
 }

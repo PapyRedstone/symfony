@@ -15,8 +15,8 @@ class __TwigTemplate_1e2479a914125a95579fb34031497d5c64a752884da713b0505ee555b19
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c040c9e7ac4ac986be7c81424210a9a7ae0e3cc7c90279e1f0aecac442ec6d88 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c040c9e7ac4ac986be7c81424210a9a7ae0e3cc7c90279e1f0aecac442ec6d88->enter($__internal_c040c9e7ac4ac986be7c81424210a9a7ae0e3cc7c90279e1f0aecac442ec6d88_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:logs.html.twig"));
+        $__internal_88d7abf9a6e0627ca73f9bb3e0be9c2c253e03209f4f3f0623fe91eab139d6dd = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_88d7abf9a6e0627ca73f9bb3e0be9c2c253e03209f4f3f0623fe91eab139d6dd->enter($__internal_88d7abf9a6e0627ca73f9bb3e0be9c2c253e03209f4f3f0623fe91eab139d6dd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:logs.html.twig"));
 
         // line 1
         echo "<ol class=\"traces logs\">
@@ -49,7 +49,7 @@ class __TwigTemplate_1e2479a914125a95579fb34031497d5c64a752884da713b0505ee555b19
         echo "</ol>
 ";
         
-        $__internal_c040c9e7ac4ac986be7c81424210a9a7ae0e3cc7c90279e1f0aecac442ec6d88->leave($__internal_c040c9e7ac4ac986be7c81424210a9a7ae0e3cc7c90279e1f0aecac442ec6d88_prof);
+        $__internal_88d7abf9a6e0627ca73f9bb3e0be9c2c253e03209f4f3f0623fe91eab139d6dd->leave($__internal_88d7abf9a6e0627ca73f9bb3e0be9c2c253e03209f4f3f0623fe91eab139d6dd_prof);
 
     }
 
@@ -85,6 +85,6 @@ class __TwigTemplate_1e2479a914125a95579fb34031497d5c64a752884da713b0505ee555b19
         </li>
     {% endfor %}
 </ol>
-", "TwigBundle:Exception:logs.html.twig", "/home/etdfrm1/www/symfony/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/logs.html.twig");
+", "TwigBundle:Exception:logs.html.twig", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/logs.html.twig");
     }
 }

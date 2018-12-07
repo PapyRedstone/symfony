@@ -124,6 +124,6 @@ class __TwigTemplate_ce668b70b21b748499c626655a2ddbd750697710d0c40ac56d04a7c7859
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Twig/layout.html.twig", "/home/etdfrm1/www/symfony/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/layout.html.twig");
+        return new Twig_Source("", "@Twig/layout.html.twig", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/layout.html.twig");
     }
 }

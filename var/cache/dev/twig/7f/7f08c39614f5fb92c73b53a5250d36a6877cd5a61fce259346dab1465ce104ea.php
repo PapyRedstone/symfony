@@ -15,8 +15,8 @@ class __TwigTemplate_5e574a10f155a288ffab61ed7cf443a299938de2c35bbcbc0e6b142780a
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_54b783f960c39973e6f835205261f5566dfb8bcc0448bef0c245330e53e8018e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_54b783f960c39973e6f835205261f5566dfb8bcc0448bef0c245330e53e8018e->enter($__internal_54b783f960c39973e6f835205261f5566dfb8bcc0448bef0c245330e53e8018e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:header.html.twig"));
+        $__internal_9d1dd3a51cdd27cfc57e3be3a1358383505297c25fada4d5b9dbc68af951b0d6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9d1dd3a51cdd27cfc57e3be3a1358383505297c25fada4d5b9dbc68af951b0d6->enter($__internal_9d1dd3a51cdd27cfc57e3be3a1358383505297c25fada4d5b9dbc68af951b0d6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:header.html.twig"));
 
         // line 1
         echo "<div id=\"header\">
@@ -38,7 +38,7 @@ class __TwigTemplate_5e574a10f155a288ffab61ed7cf443a299938de2c35bbcbc0e6b142780a
 </div>
 ";
         
-        $__internal_54b783f960c39973e6f835205261f5566dfb8bcc0448bef0c245330e53e8018e->leave($__internal_54b783f960c39973e6f835205261f5566dfb8bcc0448bef0c245330e53e8018e_prof);
+        $__internal_9d1dd3a51cdd27cfc57e3be3a1358383505297c25fada4d5b9dbc68af951b0d6->leave($__internal_9d1dd3a51cdd27cfc57e3be3a1358383505297c25fada4d5b9dbc68af951b0d6_prof);
 
     }
 
@@ -81,6 +81,6 @@ class __TwigTemplate_5e574a10f155a288ffab61ed7cf443a299938de2c35bbcbc0e6b142780a
         </div>
     </div>
 </div>
-", "WebProfilerBundle:Profiler:header.html.twig", "/home/etdfrm1/www/symfony/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/header.html.twig");
+", "WebProfilerBundle:Profiler:header.html.twig", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/header.html.twig");
     }
 }

@@ -40,6 +40,6 @@ class __TwigTemplate_344766fdda4a08e05c4e0424f1887c24e98b533375e25b11d32e5b25709
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Framework/Form/attributes.html.php", "/home/etdfrm1/www/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/attributes.html.php");
+        return new Twig_Source("", "@Framework/Form/attributes.html.php", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/attributes.html.php");
     }
 }

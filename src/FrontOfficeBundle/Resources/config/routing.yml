@@ -1,3 +1,9 @@
 front_office_homepage:
     path:     /
     defaults: { _controller: FrontOfficeBundle:Default:index }
+
+user_main_page:
+    path:     /profil/{id}
+    defaults:  { _controller: FrontOfficeBundle:User:profil }
+    requirements:
+      id: '\d+'

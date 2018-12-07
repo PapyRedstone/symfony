@@ -43,6 +43,6 @@ class __TwigTemplate_2394187784840f4920f9c7951972f5e1ba7332ecdd2ce0c74c1ad469a45
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Framework/Form/collection_widget.html.php", "/home/etdfrm1/www/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/collection_widget.html.php");
+        return new Twig_Source("", "@Framework/Form/collection_widget.html.php", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/collection_widget.html.php");
     }
 }

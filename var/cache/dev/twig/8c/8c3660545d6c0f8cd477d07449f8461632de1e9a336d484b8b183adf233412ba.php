@@ -15,8 +15,8 @@ class __TwigTemplate_2f807179519f098636d1e2e87e93c58eede7a1a7cfae69b64976563d519
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_efc621dfcde3213269c5c378aa482fdd2b9a46d6b018bfb3ad410af6c032572d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_efc621dfcde3213269c5c378aa482fdd2b9a46d6b018bfb3ad410af6c032572d->enter($__internal_efc621dfcde3213269c5c378aa482fdd2b9a46d6b018bfb3ad410af6c032572d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Router:panel.html.twig"));
+        $__internal_627b2245a7667e5cef248ce115dccd1fab0dde8a7e672a229ba253ffe6c5b6a2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_627b2245a7667e5cef248ce115dccd1fab0dde8a7e672a229ba253ffe6c5b6a2->enter($__internal_627b2245a7667e5cef248ce115dccd1fab0dde8a7e672a229ba253ffe6c5b6a2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Router:panel.html.twig"));
 
         // line 1
         echo "<h2>Routing</h2>
@@ -197,7 +197,7 @@ $context["trace"], "level", array()) == 2)) {
 </p>
 ";
         
-        $__internal_efc621dfcde3213269c5c378aa482fdd2b9a46d6b018bfb3ad410af6c032572d->leave($__internal_efc621dfcde3213269c5c378aa482fdd2b9a46d6b018bfb3ad410af6c032572d_prof);
+        $__internal_627b2245a7667e5cef248ce115dccd1fab0dde8a7e672a229ba253ffe6c5b6a2->leave($__internal_627b2245a7667e5cef248ce115dccd1fab0dde8a7e672a229ba253ffe6c5b6a2_prof);
 
     }
 
@@ -304,6 +304,6 @@ $context["trace"], "level", array()) == 2)) {
     Note: These matching logs are based on the current router configuration,
     which might differ from the configuration used when profiling this request.
 </p>
-", "WebProfilerBundle:Router:panel.html.twig", "/home/etdfrm1/www/symfony/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Router/panel.html.twig");
+", "WebProfilerBundle:Router:panel.html.twig", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Router/panel.html.twig");
     }
 }

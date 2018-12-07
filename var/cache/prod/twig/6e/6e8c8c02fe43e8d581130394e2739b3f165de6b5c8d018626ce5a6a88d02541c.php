@@ -575,6 +575,6 @@ class __TwigTemplate_0af9809cbc66a59b6124f64d065c0486eeafc25bcd6ca47834fd12e21b8
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "SwiftmailerBundle:Collector:swiftmailer.html.twig", "/home/etdfrm1/www/symfony/vendor/symfony/swiftmailer-bundle/Resources/views/Collector/swiftmailer.html.twig");
+        return new Twig_Source("", "SwiftmailerBundle:Collector:swiftmailer.html.twig", "/var/www/html/symfony/vendor/symfony/swiftmailer-bundle/Resources/views/Collector/swiftmailer.html.twig");
     }
 }

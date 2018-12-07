@@ -40,6 +40,6 @@ class __TwigTemplate_7f34a242c6d25203ec5b598d8934ee8af995b300f02026534df5432e434
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "WebServiceBundle:Default:index.html.twig", "/home/etdfrm1/www/symfony/src/WebServiceBundle/Resources/views/Default/index.html.twig");
+        return new Twig_Source("", "WebServiceBundle:Default:index.html.twig", "/var/www/html/symfony/src/WebServiceBundle/Resources/views/Default/index.html.twig");
     }
 }

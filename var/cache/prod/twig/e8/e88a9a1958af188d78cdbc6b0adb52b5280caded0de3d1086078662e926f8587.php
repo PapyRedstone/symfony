@@ -39,6 +39,6 @@ class __TwigTemplate_84e2aff7d53870173fee245bf212b560f515b2f956c59303ef88ebccb73
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "TwigBundle:Exception:error.atom.twig", "/home/etdfrm1/www/symfony/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.atom.twig");
+        return new Twig_Source("", "TwigBundle:Exception:error.atom.twig", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.atom.twig");
     }
 }

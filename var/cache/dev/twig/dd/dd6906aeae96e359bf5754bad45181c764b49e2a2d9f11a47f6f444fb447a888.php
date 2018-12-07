@@ -15,14 +15,14 @@ class __TwigTemplate_9553fa96834c0ab4dcb8de3e70f72131636b26386dd26bde3b020531765
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_7e85008309a3dbb5b7c227a4f06ad9bec1918b14ffd15b2d8309fa62568daed7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_7e85008309a3dbb5b7c227a4f06ad9bec1918b14ffd15b2d8309fa62568daed7->enter($__internal_7e85008309a3dbb5b7c227a4f06ad9bec1918b14ffd15b2d8309fa62568daed7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/search_widget.html.php"));
+        $__internal_38a897214ed17a91863e82478fef8dfcf8d2c5c9243f2a9b57076427d0f0efb3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_38a897214ed17a91863e82478fef8dfcf8d2c5c9243f2a9b57076427d0f0efb3->enter($__internal_38a897214ed17a91863e82478fef8dfcf8d2c5c9243f2a9b57076427d0f0efb3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/search_widget.html.php"));
 
         // line 1
         echo "<?php echo \$view['form']->block(\$form, 'form_widget_simple', array('type' => isset(\$type) ? \$type : 'search')) ?>
 ";
         
-        $__internal_7e85008309a3dbb5b7c227a4f06ad9bec1918b14ffd15b2d8309fa62568daed7->leave($__internal_7e85008309a3dbb5b7c227a4f06ad9bec1918b14ffd15b2d8309fa62568daed7_prof);
+        $__internal_38a897214ed17a91863e82478fef8dfcf8d2c5c9243f2a9b57076427d0f0efb3->leave($__internal_38a897214ed17a91863e82478fef8dfcf8d2c5c9243f2a9b57076427d0f0efb3_prof);
 
     }
 
@@ -47,6 +47,6 @@ class __TwigTemplate_9553fa96834c0ab4dcb8de3e70f72131636b26386dd26bde3b020531765
     public function getSourceContext()
     {
         return new Twig_Source("<?php echo \$view['form']->block(\$form, 'form_widget_simple', array('type' => isset(\$type) ? \$type : 'search')) ?>
-", "@Framework/Form/search_widget.html.php", "/home/etdfrm1/www/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/search_widget.html.php");
+", "@Framework/Form/search_widget.html.php", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/search_widget.html.php");
     }
 }

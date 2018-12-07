@@ -47,6 +47,6 @@ class __TwigTemplate_122ca5c9ee77c36c31c733294f006960a896627ac8365d566c624f5dfe6
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Framework/Form/form_label.html.php", "/home/etdfrm1/www/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/form_label.html.php");
+        return new Twig_Source("", "@Framework/Form/form_label.html.php", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/form_label.html.php");
     }
 }

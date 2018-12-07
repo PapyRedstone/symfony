@@ -15,13 +15,13 @@ class __TwigTemplate_11fbc2198b9cff59e44d0de36bc9cd6575455705f2ca6dcc7421f23ea21
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_613e34dbd0c3dd38e3fe38b5b7be7eb4f3072e02a98c77fed74624653200a19e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_613e34dbd0c3dd38e3fe38b5b7be7eb4f3072e02a98c77fed74624653200a19e->enter($__internal_613e34dbd0c3dd38e3fe38b5b7be7eb4f3072e02a98c77fed74624653200a19e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:exception.rdf.twig"));
+        $__internal_e497e7cef34da01f9e3b742ddfbf3e572edec4de5c8a1982cde6814b37466df0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_e497e7cef34da01f9e3b742ddfbf3e572edec4de5c8a1982cde6814b37466df0->enter($__internal_e497e7cef34da01f9e3b742ddfbf3e572edec4de5c8a1982cde6814b37466df0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:exception.rdf.twig"));
 
         // line 1
         $this->loadTemplate("@Twig/Exception/exception.xml.twig", "TwigBundle:Exception:exception.rdf.twig", 1)->display(array_merge($context, array("exception" => ($context["exception"] ?? $this->getContext($context, "exception")))));
         
-        $__internal_613e34dbd0c3dd38e3fe38b5b7be7eb4f3072e02a98c77fed74624653200a19e->leave($__internal_613e34dbd0c3dd38e3fe38b5b7be7eb4f3072e02a98c77fed74624653200a19e_prof);
+        $__internal_e497e7cef34da01f9e3b742ddfbf3e572edec4de5c8a1982cde6814b37466df0->leave($__internal_e497e7cef34da01f9e3b742ddfbf3e572edec4de5c8a1982cde6814b37466df0_prof);
 
     }
 
@@ -51,6 +51,6 @@ class __TwigTemplate_11fbc2198b9cff59e44d0de36bc9cd6575455705f2ca6dcc7421f23ea21
     public function getSourceContext()
     {
         return new Twig_Source("{% include '@Twig/Exception/exception.xml.twig' with { 'exception': exception } %}
-", "TwigBundle:Exception:exception.rdf.twig", "/home/etdfrm1/www/symfony/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/exception.rdf.twig");
+", "TwigBundle:Exception:exception.rdf.twig", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/exception.rdf.twig");
     }
 }

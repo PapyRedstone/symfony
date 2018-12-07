@@ -40,6 +40,6 @@ class __TwigTemplate_2b15992296daae926f1396087e90e5546a7a2c71363a1e83196b3b32d05
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Framework/Form/password_widget.html.php", "/home/etdfrm1/www/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/password_widget.html.php");
+        return new Twig_Source("", "@Framework/Form/password_widget.html.php", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/password_widget.html.php");
     }
 }

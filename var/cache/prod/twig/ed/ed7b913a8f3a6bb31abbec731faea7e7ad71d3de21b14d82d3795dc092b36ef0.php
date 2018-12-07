@@ -40,6 +40,6 @@ class __TwigTemplate_533ffd7d372e8fad3d721342d7ba6a58a5123681eafa84559aace65a891
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Framework/Form/search_widget.html.php", "/home/etdfrm1/www/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/search_widget.html.php");
+        return new Twig_Source("", "@Framework/Form/search_widget.html.php", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/search_widget.html.php");
     }
 }

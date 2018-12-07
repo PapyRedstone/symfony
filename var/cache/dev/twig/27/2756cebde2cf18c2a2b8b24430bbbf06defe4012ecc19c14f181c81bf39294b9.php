@@ -15,13 +15,13 @@ class __TwigTemplate_1a4e254d99350e31e2f1320a6b3258f61bc6876a0452cf5602c2a2eef09
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_e46a18e78dc28b91ca766979cf48a707fc47f1cd7b8a2283c9a490eb0cde049c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e46a18e78dc28b91ca766979cf48a707fc47f1cd7b8a2283c9a490eb0cde049c->enter($__internal_e46a18e78dc28b91ca766979cf48a707fc47f1cd7b8a2283c9a490eb0cde049c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:error.atom.twig"));
+        $__internal_48eb2cc1c681c0bd1353c2e73244a205804d8aad11f8ba7de9f923a76fbe0c2a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_48eb2cc1c681c0bd1353c2e73244a205804d8aad11f8ba7de9f923a76fbe0c2a->enter($__internal_48eb2cc1c681c0bd1353c2e73244a205804d8aad11f8ba7de9f923a76fbe0c2a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:error.atom.twig"));
 
         // line 1
         $this->loadTemplate("@Twig/Exception/error.xml.twig", "TwigBundle:Exception:error.atom.twig", 1)->display($context);
         
-        $__internal_e46a18e78dc28b91ca766979cf48a707fc47f1cd7b8a2283c9a490eb0cde049c->leave($__internal_e46a18e78dc28b91ca766979cf48a707fc47f1cd7b8a2283c9a490eb0cde049c_prof);
+        $__internal_48eb2cc1c681c0bd1353c2e73244a205804d8aad11f8ba7de9f923a76fbe0c2a->leave($__internal_48eb2cc1c681c0bd1353c2e73244a205804d8aad11f8ba7de9f923a76fbe0c2a_prof);
 
     }
 
@@ -46,6 +46,6 @@ class __TwigTemplate_1a4e254d99350e31e2f1320a6b3258f61bc6876a0452cf5602c2a2eef09
     public function getSourceContext()
     {
         return new Twig_Source("{% include '@Twig/Exception/error.xml.twig' %}
-", "TwigBundle:Exception:error.atom.twig", "/home/etdfrm1/www/symfony/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.atom.twig");
+", "TwigBundle:Exception:error.atom.twig", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.atom.twig");
     }
 }

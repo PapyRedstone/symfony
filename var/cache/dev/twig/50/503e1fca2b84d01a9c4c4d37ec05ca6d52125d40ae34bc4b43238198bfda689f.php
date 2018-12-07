@@ -15,14 +15,14 @@ class __TwigTemplate_d7dbf3db3bb7bed2a3f4feef7501c2394c961991fa14539e0d0c8dba0b6
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a4c2f39659f0bd03ddfe25400624c9b6d54ba80f6920ef7093c7c9032dd92f21 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a4c2f39659f0bd03ddfe25400624c9b6d54ba80f6920ef7093c7c9032dd92f21->enter($__internal_a4c2f39659f0bd03ddfe25400624c9b6d54ba80f6920ef7093c7c9032dd92f21_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/choice_options.html.php"));
+        $__internal_59cec6577eb49f3d01bda63cba0d556bb9a7ec6d6ca4b2cc43b11e7103cf8266 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_59cec6577eb49f3d01bda63cba0d556bb9a7ec6d6ca4b2cc43b11e7103cf8266->enter($__internal_59cec6577eb49f3d01bda63cba0d556bb9a7ec6d6ca4b2cc43b11e7103cf8266_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/choice_options.html.php"));
 
         // line 1
         echo "<?php echo \$view['form']->block(\$form, 'choice_widget_options') ?>
 ";
         
-        $__internal_a4c2f39659f0bd03ddfe25400624c9b6d54ba80f6920ef7093c7c9032dd92f21->leave($__internal_a4c2f39659f0bd03ddfe25400624c9b6d54ba80f6920ef7093c7c9032dd92f21_prof);
+        $__internal_59cec6577eb49f3d01bda63cba0d556bb9a7ec6d6ca4b2cc43b11e7103cf8266->leave($__internal_59cec6577eb49f3d01bda63cba0d556bb9a7ec6d6ca4b2cc43b11e7103cf8266_prof);
 
     }
 
@@ -47,6 +47,6 @@ class __TwigTemplate_d7dbf3db3bb7bed2a3f4feef7501c2394c961991fa14539e0d0c8dba0b6
     public function getSourceContext()
     {
         return new Twig_Source("<?php echo \$view['form']->block(\$form, 'choice_widget_options') ?>
-", "@Framework/Form/choice_options.html.php", "/home/etdfrm1/www/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/choice_options.html.php");
+", "@Framework/Form/choice_options.html.php", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/choice_options.html.php");
     }
 }

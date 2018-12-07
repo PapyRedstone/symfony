@@ -40,6 +40,6 @@ class __TwigTemplate_40df09e0964ee363c8c53cd7ce10e2b8b79f28f5d9124a11ee8cc53f326
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Framework/Form/integer_widget.html.php", "/home/etdfrm1/www/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/integer_widget.html.php");
+        return new Twig_Source("", "@Framework/Form/integer_widget.html.php", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/integer_widget.html.php");
     }
 }

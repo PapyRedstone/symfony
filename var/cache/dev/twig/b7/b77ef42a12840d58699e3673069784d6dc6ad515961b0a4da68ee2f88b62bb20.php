@@ -15,14 +15,14 @@ class __TwigTemplate_93e6d97fe1779f5e1ad3aeb45ba946d842a23dff8c07c99deb961e70859
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_9628c87a4e9a1f31878fd04195f1b622c86a13ce895ed4ea804162cd4471f6e5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_9628c87a4e9a1f31878fd04195f1b622c86a13ce895ed4ea804162cd4471f6e5->enter($__internal_9628c87a4e9a1f31878fd04195f1b622c86a13ce895ed4ea804162cd4471f6e5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/email_widget.html.php"));
+        $__internal_7856ef1dc76e0107f0bc96f17851dbcea76214c950eaf9cb324d62b1178c5d4a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_7856ef1dc76e0107f0bc96f17851dbcea76214c950eaf9cb324d62b1178c5d4a->enter($__internal_7856ef1dc76e0107f0bc96f17851dbcea76214c950eaf9cb324d62b1178c5d4a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/email_widget.html.php"));
 
         // line 1
         echo "<?php echo \$view['form']->block(\$form, 'form_widget_simple', array('type' => isset(\$type) ? \$type : 'email')) ?>
 ";
         
-        $__internal_9628c87a4e9a1f31878fd04195f1b622c86a13ce895ed4ea804162cd4471f6e5->leave($__internal_9628c87a4e9a1f31878fd04195f1b622c86a13ce895ed4ea804162cd4471f6e5_prof);
+        $__internal_7856ef1dc76e0107f0bc96f17851dbcea76214c950eaf9cb324d62b1178c5d4a->leave($__internal_7856ef1dc76e0107f0bc96f17851dbcea76214c950eaf9cb324d62b1178c5d4a_prof);
 
     }
 
@@ -47,6 +47,6 @@ class __TwigTemplate_93e6d97fe1779f5e1ad3aeb45ba946d842a23dff8c07c99deb961e70859
     public function getSourceContext()
     {
         return new Twig_Source("<?php echo \$view['form']->block(\$form, 'form_widget_simple', array('type' => isset(\$type) ? \$type : 'email')) ?>
-", "@Framework/Form/email_widget.html.php", "/home/etdfrm1/www/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/email_widget.html.php");
+", "@Framework/Form/email_widget.html.php", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/email_widget.html.php");
     }
 }

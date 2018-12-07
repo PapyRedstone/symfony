@@ -15,8 +15,8 @@ class __TwigTemplate_179f17bdb16ef2ae6247834eeb67afc821dbd0e7acbb9c41f9b5cf36ff5
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f8d62df6877c4c52ef3a4b776db200210b5129825292f18295823aa1625fa0d5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_f8d62df6877c4c52ef3a4b776db200210b5129825292f18295823aa1625fa0d5->enter($__internal_f8d62df6877c4c52ef3a4b776db200210b5129825292f18295823aa1625fa0d5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:exception.txt.twig"));
+        $__internal_dceb342bfe22751bbcf0295fc88468e0d4cdc6cb54884096421565448dd7d6b1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_dceb342bfe22751bbcf0295fc88468e0d4cdc6cb54884096421565448dd7d6b1->enter($__internal_dceb342bfe22751bbcf0295fc88468e0d4cdc6cb54884096421565448dd7d6b1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:exception.txt.twig"));
 
         // line 1
         echo "[exception] ";
@@ -50,7 +50,7 @@ class __TwigTemplate_179f17bdb16ef2ae6247834eeb67afc821dbd0e7acbb9c41f9b5cf36ff5
         unset($context['_seq'], $context['_iterated'], $context['i'], $context['e'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_f8d62df6877c4c52ef3a4b776db200210b5129825292f18295823aa1625fa0d5->leave($__internal_f8d62df6877c4c52ef3a4b776db200210b5129825292f18295823aa1625fa0d5_prof);
+        $__internal_dceb342bfe22751bbcf0295fc88468e0d4cdc6cb54884096421565448dd7d6b1->leave($__internal_dceb342bfe22751bbcf0295fc88468e0d4cdc6cb54884096421565448dd7d6b1_prof);
 
     }
 
@@ -86,6 +86,6 @@ class __TwigTemplate_179f17bdb16ef2ae6247834eeb67afc821dbd0e7acbb9c41f9b5cf36ff5
 {% include '@Twig/Exception/traces.txt.twig' with { 'exception': e } only %}
 
 {% endfor %}
-", "TwigBundle:Exception:exception.txt.twig", "/home/etdfrm1/www/symfony/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/exception.txt.twig");
+", "TwigBundle:Exception:exception.txt.twig", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/exception.txt.twig");
     }
 }

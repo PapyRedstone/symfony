@@ -44,6 +44,6 @@ class __TwigTemplate_c39533e1a98e538c03d9ab0c220c043be398b4949a0566a3fe89cad1cc1
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Framework/Form/radio_widget.html.php", "/home/etdfrm1/www/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/radio_widget.html.php");
+        return new Twig_Source("", "@Framework/Form/radio_widget.html.php", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/radio_widget.html.php");
     }
 }

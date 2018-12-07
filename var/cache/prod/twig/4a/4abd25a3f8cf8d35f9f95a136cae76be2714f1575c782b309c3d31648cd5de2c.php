@@ -95,6 +95,6 @@ class __TwigTemplate_6f4c08f16166b3219c51f1821e468f5e363cc910b33ad312ee7cbe60250
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "::base.html.twig", "/home/etdfrm1/www/symfony/app/Resources/views/base.html.twig");
+        return new Twig_Source("", "::base.html.twig", "/var/www/html/symfony/app/Resources/views/base.html.twig");
     }
 }

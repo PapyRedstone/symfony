@@ -15,8 +15,8 @@ class __TwigTemplate_aa15f58eb5b23ff33096a330603351099836f7a58ca0137ee1746301f0e
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_1ce04dc6e568a4e7f6c7c43932b6f15e35354d34c674c3ec5f485f44b11d6075 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_1ce04dc6e568a4e7f6c7c43932b6f15e35354d34c674c3ec5f485f44b11d6075->enter($__internal_1ce04dc6e568a4e7f6c7c43932b6f15e35354d34c674c3ec5f485f44b11d6075_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/collection_widget.html.php"));
+        $__internal_7d52fe9667755b00428156d05210ce338d86c825fc5d0061591abc6e14e46399 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_7d52fe9667755b00428156d05210ce338d86c825fc5d0061591abc6e14e46399->enter($__internal_7d52fe9667755b00428156d05210ce338d86c825fc5d0061591abc6e14e46399_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/collection_widget.html.php"));
 
         // line 1
         echo "<?php if (isset(\$prototype)): ?>
@@ -25,7 +25,7 @@ class __TwigTemplate_aa15f58eb5b23ff33096a330603351099836f7a58ca0137ee1746301f0e
 <?php echo \$view['form']->widget(\$form, array('attr' => \$attr)) ?>
 ";
         
-        $__internal_1ce04dc6e568a4e7f6c7c43932b6f15e35354d34c674c3ec5f485f44b11d6075->leave($__internal_1ce04dc6e568a4e7f6c7c43932b6f15e35354d34c674c3ec5f485f44b11d6075_prof);
+        $__internal_7d52fe9667755b00428156d05210ce338d86c825fc5d0061591abc6e14e46399->leave($__internal_7d52fe9667755b00428156d05210ce338d86c825fc5d0061591abc6e14e46399_prof);
 
     }
 
@@ -53,6 +53,6 @@ class __TwigTemplate_aa15f58eb5b23ff33096a330603351099836f7a58ca0137ee1746301f0e
     <?php \$attr['data-prototype'] = \$view->escape(\$view['form']->row(\$prototype)) ?>
 <?php endif ?>
 <?php echo \$view['form']->widget(\$form, array('attr' => \$attr)) ?>
-", "@Framework/Form/collection_widget.html.php", "/home/etdfrm1/www/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/collection_widget.html.php");
+", "@Framework/Form/collection_widget.html.php", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/collection_widget.html.php");
     }
 }

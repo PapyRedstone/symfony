@@ -50,6 +50,6 @@ class __TwigTemplate_eb816929d37862481e78f3da56dec0bf17bd6af3d2d36fdec124ab9057c
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Framework/Form/widget_attributes.html.php", "/home/etdfrm1/www/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/widget_attributes.html.php");
+        return new Twig_Source("", "@Framework/Form/widget_attributes.html.php", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/widget_attributes.html.php");
     }
 }

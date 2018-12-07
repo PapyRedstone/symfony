@@ -43,6 +43,6 @@ class __TwigTemplate_c606942e524d0842f6122bd7dd215d9a880c664ee1652b7f83791d8e7d4
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Doctrine/Collector/icon.svg", "/home/etdfrm1/www/symfony/vendor/doctrine/doctrine-bundle/Resources/views/Collector/icon.svg");
+        return new Twig_Source("", "@Doctrine/Collector/icon.svg", "/var/www/html/symfony/vendor/doctrine/doctrine-bundle/Resources/views/Collector/icon.svg");
     }
 }

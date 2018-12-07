@@ -15,8 +15,8 @@ class __TwigTemplate_2d33a1c133628afda43d5470da519a3cfafc43393ec989fbeb6ab143ebe
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_3790149d3fd6352a5bfcffbdef5f49b03be2260f478610416463ab497fc7f7af = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_3790149d3fd6352a5bfcffbdef5f49b03be2260f478610416463ab497fc7f7af->enter($__internal_3790149d3fd6352a5bfcffbdef5f49b03be2260f478610416463ab497fc7f7af_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Collector:exception.css.twig"));
+        $__internal_335803b25795f82e8c2e00e0315f7889b0f1396ee258d873e64313695b096bfe = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_335803b25795f82e8c2e00e0315f7889b0f1396ee258d873e64313695b096bfe->enter($__internal_335803b25795f82e8c2e00e0315f7889b0f1396ee258d873e64313695b096bfe_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Collector:exception.css.twig"));
 
         // line 1
         echo ".sf-reset .traces {
@@ -117,7 +117,7 @@ class __TwigTemplate_2d33a1c133628afda43d5470da519a3cfafc43393ec989fbeb6ab143ebe
 }
 ";
         
-        $__internal_3790149d3fd6352a5bfcffbdef5f49b03be2260f478610416463ab497fc7f7af->leave($__internal_3790149d3fd6352a5bfcffbdef5f49b03be2260f478610416463ab497fc7f7af_prof);
+        $__internal_335803b25795f82e8c2e00e0315f7889b0f1396ee258d873e64313695b096bfe->leave($__internal_335803b25795f82e8c2e00e0315f7889b0f1396ee258d873e64313695b096bfe_prof);
 
     }
 
@@ -237,6 +237,6 @@ class __TwigTemplate_2d33a1c133628afda43d5470da519a3cfafc43393ec989fbeb6ab143ebe
 .sf-reset .toggle {
     vertical-align: middle;
 }
-", "WebProfilerBundle:Collector:exception.css.twig", "/home/etdfrm1/www/symfony/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Collector/exception.css.twig");
+", "WebProfilerBundle:Collector:exception.css.twig", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Collector/exception.css.twig");
     }
 }
