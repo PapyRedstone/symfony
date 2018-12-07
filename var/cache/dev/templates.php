@@ -81,6 +81,7 @@
   'DoctrineBundle:Collector:db.html.twig' => '/home/alex/Documents/symfony/symfony/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig',
   'BackOfficeBundle:Default:index.html.twig' => '/home/alex/Documents/symfony/symfony/src/BackOfficeBundle/Resources/views/Default/index.html.twig',
   'WebServiceBundle:Default:index.html.twig' => '/home/alex/Documents/symfony/symfony/src/WebServiceBundle/Resources/views/Default/index.html.twig',
+  'FrontOfficeBundle:User:profil.html.twig' => '/home/alex/Documents/symfony/symfony/src/FrontOfficeBundle/Resources/views/User/profil.html.twig',
   'FrontOfficeBundle:Default:index.html.twig' => '/home/alex/Documents/symfony/symfony/src/FrontOfficeBundle/Resources/views/Default/index.html.twig',
   'DebugBundle:Profiler:dump.html.twig' => '/home/alex/Documents/symfony/symfony/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views/Profiler/dump.html.twig',
   'WebProfilerBundle:Router:panel.html.twig' => '/home/alex/Documents/symfony/symfony/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Router/panel.html.twig',

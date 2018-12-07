@@ -109,6 +109,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'FrontOfficeBundle\\Controller\\DefaultController::indexAction',  '_route' => 'front_office_homepage',);
         }
 
+        // user_main_page
+        if (0 === strpos($pathinfo, '/profil') && preg_match('#^/profil/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'user_main_page')), array (  '_controller' => 'FrontOfficeBundle\\Controller\\UserController::profilAction',));
+        }
+
         if (0 === strpos($pathinfo, '/a')) {
             if (0 === strpos($pathinfo, '/api')) {
                 // web_service_homepage
@@ -117,7 +122,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                         return $this->redirect($pathinfo.'/', 'web_service_homepage');
                     }
 
-                    return array (  '_controller' => 'WebServiceBundle:Default:index',  '_route' => 'web_service_homepage',);
+                    return array (  '_controller' => 'WebServiceBundle\\Controller\\DefaultController::indexAction',  '_route' => 'web_service_homepage',);
                 }
 
                 // web_service_a
@@ -126,13 +131,13 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                         return $this->redirect($pathinfo.'/', 'web_service_a');
                     }
 
-                    return array (  '_controller' => 'WebServiceBundle:Default:index',  '_route' => 'web_service_a',);
+                    return array (  '_controller' => 'WebServiceBundle\\Controller\\DefaultController::indexAction',  '_route' => 'web_service_a',);
                 }
 
             }
 
             // back_office_homepage
-            if (rtrim($pathinfo, '/') === '/admin') {
+            if (rtrim($pathinfo, '/') === '/admindep') {
                 if (substr($pathinfo, -1) !== '/') {
                     return $this->redirect($pathinfo.'/', 'back_office_homepage');
                 }
