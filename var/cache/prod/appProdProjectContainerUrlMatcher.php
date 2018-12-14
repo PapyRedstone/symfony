@@ -37,8 +37,18 @@ class appProdProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\R
         }
 
         // user_main_page
-        if (0 === strpos($pathinfo, '/profil') && preg_match('#^/profil/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+        if (0 === strpos($pathinfo, '/profil') && preg_match('#^/profil/(?P<idUser>[^/]++)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'user_main_page')), array (  '_controller' => 'FrontOfficeBundle\\Controller\\UserController::profilAction',));
+        }
+
+        // create_movement
+        if (0 === strpos($pathinfo, '/create') && preg_match('#^/create/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'create_movement')), array (  '_controller' => 'FrontOfficeBundle\\Controller\\UserController::createAction',));
+        }
+
+        // show_movement
+        if (0 === strpos($pathinfo, '/show') && preg_match('#^/show/(?P<idMonth>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'show_movement')), array (  '_controller' => 'FrontOfficeBundle\\Controller\\UserController::showAction',));
         }
 
         if (0 === strpos($pathinfo, '/a')) {

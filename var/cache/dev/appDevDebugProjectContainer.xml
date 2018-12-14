@@ -411,6 +411,9 @@
     </parameter>
   </parameters>
   <services>
+    <service id="twig.extension.intl" class="Twig_Extensions_Extension_Intl">
+      <tag name="twig.extension"/>
+    </service>
     <service id="controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
       <tag name="monolog.logger" channel="request"/>
       <argument type="service" id="kernel"/>
@@ -526,7 +529,7 @@
                   <tag name="cache.pool"/>
                   <argument>LeTdJMcA5n</argument>
                   <argument>0</argument>
-                  <argument>RMJ+w7o1iHmZK0tzexyUib</argument>
+                  <argument>NqdtHiEBbGirHUA5rYwrO2</argument>
                   <argument>/var/www/html/symfony/var/cache/dev/pools</argument>
                   <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
                   <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -539,7 +542,7 @@
                   <tag name="cache.pool"/>
                   <argument>nFJAwZviYW</argument>
                   <argument>0</argument>
-                  <argument>RMJ+w7o1iHmZK0tzexyUib</argument>
+                  <argument>NqdtHiEBbGirHUA5rYwrO2</argument>
                   <argument>/var/www/html/symfony/var/cache/dev/pools</argument>
                   <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
                   <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -871,7 +874,7 @@
       <tag name="cache.pool"/>
       <argument>vmyELYWMbr</argument>
       <argument>0</argument>
-      <argument>RMJ+w7o1iHmZK0tzexyUib</argument>
+      <argument>NqdtHiEBbGirHUA5rYwrO2</argument>
       <argument>/var/www/html/symfony/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -1607,7 +1610,7 @@
       <argument type="collection">
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>5c0c0b878c8286.22336454</argument>
+            <argument>5c133225b70cd7.04731501</argument>
           </service>
         </argument>
       </argument>
@@ -1741,7 +1744,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>5c0c0b878c8286.22336454</argument>
+            <argument>5c133225b70cd7.04731501</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -1801,6 +1804,9 @@
           <argument key="thousands_separator">,</argument>
         </argument>
       </argument>
+      <call method="addExtension">
+        <argument type="service" id="twig.extension.intl"/>
+      </call>
       <call method="addExtension">
         <argument type="service">
           <service class="Symfony\Bridge\Twig\Extension\LogoutUrlExtension" public="false">

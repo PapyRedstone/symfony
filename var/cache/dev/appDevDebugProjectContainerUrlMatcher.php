@@ -114,6 +114,16 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'user_main_page')), array (  '_controller' => 'FrontOfficeBundle\\Controller\\UserController::profilAction',));
         }
 
+        // create_movement
+        if (0 === strpos($pathinfo, '/create') && preg_match('#^/create/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'create_movement')), array (  '_controller' => 'FrontOfficeBundle\\Controller\\UserController::createAction',));
+        }
+
+        // show_movement
+        if (0 === strpos($pathinfo, '/show') && preg_match('#^/show/(?P<id>\\d+)/(?P<month>\\d+)/(?P<year>\\d+)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'show_movement')), array (  '_controller' => 'FrontOfficeBundle\\Controller\\UserController::showAction',));
+        }
+
         if (0 === strpos($pathinfo, '/a')) {
             if (0 === strpos($pathinfo, '/api')) {
                 // web_service_homepage

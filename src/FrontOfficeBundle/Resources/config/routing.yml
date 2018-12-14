@@ -7,3 +7,17 @@ user_main_page:
     defaults:  { _controller: FrontOfficeBundle:User:profil }
     requirements:
       id: '\d+'
+
+create_movement:
+    path:     /create/{id}
+    defaults:  { _controller: FrontOfficeBundle:User:create }
+    requirements:
+      id: '\d+'
+
+show_movement:
+    path:     /show/{id}/{month}/{year}
+    defaults:  { _controller: FrontOfficeBundle:User:show }
+    requirements:
+      id: '\d+'
+      month: '\d+'
+      year: '\d+'
