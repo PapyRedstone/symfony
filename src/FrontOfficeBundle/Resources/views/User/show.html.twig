@@ -2,21 +2,35 @@
 
 {% block body %}
 <table class="table table-bordered">
-<thead>
-  <tr>
-    <th scope="col" colspan="2">Date</th>
-    <th scope="col">Utilisation du vélo</th>
-    <th scope="col">Commentaires</th>
-    <th scope="col">Nb Kilomètres en vélo</th>
-    <th scope="col">Indémnisation</th>
-  </tr>
-</thead>
-<tbody>
-  {% for i in 1..nbdays %}
-  <tr>
-    <td>{{date("l",mktime(0,0,0,month,i,year))}}</td>
-    <td>{{i}}</td>
-  </tr>
-  {% endfor %}
-</tbody>
+  <thead>
+    <tr>
+      <th scope="col" colspan="2">Date</th>
+      <th scope="col">Utilisation du vélo</th>
+      <th scope="col">Aller-retour ?</th>
+      <th scope="col">Nb Kilomètres en vélo</th>
+      <th scope="col">Indémnisation</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in 1..nbdays %}
+    <tr>
+      <td>{{monthdays[i-1]}}</td>
+      <td>{{i}}</td>
+      {% for day in days %}
+      {% if day.jour == i %}
+      <td> Oui </td>
+      <td> Oui </td>
+      <td>{{ day.nb_km }} KM</td>
+      <td>{{ day.montant }} €</td>
+      {% endif %}
+      {% endfor %}
+    </tr>
+    {% endfor %}
+    <tr>
+      <th colspan="2"> Sous-Total </th>
+      <th colspan="2"></th>
+      {{dump(addition)}}
+    </tr>
+  </tbody>
+
 {% endblock body %}

@@ -114,14 +114,19 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'user_main_page')), array (  '_controller' => 'FrontOfficeBundle\\Controller\\UserController::profilAction',));
         }
 
-        // create_movement
-        if (0 === strpos($pathinfo, '/create') && preg_match('#^/create/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'create_movement')), array (  '_controller' => 'FrontOfficeBundle\\Controller\\UserController::createAction',));
+        // show_month
+        if (0 === strpos($pathinfo, '/show') && preg_match('#^/show/(?P<id>\\d+)/(?P<month>\\d+)/(?P<year>\\d+)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'show_month')), array (  '_controller' => 'FrontOfficeBundle\\Controller\\UserController::showAction',));
         }
 
-        // show_movement
-        if (0 === strpos($pathinfo, '/show') && preg_match('#^/show/(?P<id>\\d+)/(?P<month>\\d+)/(?P<year>\\d+)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'show_movement')), array (  '_controller' => 'FrontOfficeBundle\\Controller\\UserController::showAction',));
+        // add_month
+        if (0 === strpos($pathinfo, '/addMonth') && preg_match('#^/addMonth/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'add_month')), array (  '_controller' => 'FrontOfficeBundle\\Controller\\UserController::addMonthAction',));
+        }
+
+        // delete_month
+        if (0 === strpos($pathinfo, '/deleteMonth') && preg_match('#^/deleteMonth/(?P<idMonth>\\d+)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'delete_month')), array (  '_controller' => 'FrontOfficeBundle\\Controller\\UserController::deleteMonthAction',));
         }
 
         if (0 === strpos($pathinfo, '/a')) {

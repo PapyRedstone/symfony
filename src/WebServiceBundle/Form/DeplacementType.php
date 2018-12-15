@@ -5,16 +5,15 @@ namespace WebServiceBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
-class DeplacementJourType extends AbstractType
+class DeplacementType extends AbstractType
 {
     /**
      * {@inheritdoc}
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nbKm')->add('montant')->add('jour')->add('date')->add('save',SubmitType::class)      ;
+        $builder->add('annee')->add('mois')        ;
     }
 
     /**
@@ -23,7 +22,7 @@ class DeplacementJourType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'WebServiceBundle\Entity\DeplacementJour'
+            'data_class' => 'WebServiceBundle\Entity\Deplacement'
         ));
     }
 
@@ -32,7 +31,7 @@ class DeplacementJourType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'webservicebundle_deplacementjour';
+        return 'webservicebundle_deplacement';
     }
 
 

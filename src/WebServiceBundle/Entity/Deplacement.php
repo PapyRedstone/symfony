@@ -3,7 +3,7 @@
 namespace WebServiceBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use Symfony\Component\Validator\Constraints as Assert;
 /**
  * Deplacement
  *
@@ -25,6 +25,7 @@ class Deplacement
      * @var integer
      *
      * @ORM\Column(name="annee", type="integer", nullable=true)
+     * @Assert\NotBlank
      */
     private $annee;
 
@@ -32,6 +33,8 @@ class Deplacement
      * @var integer
      *
      * @ORM\Column(name="mois", type="integer", nullable=true)
+     * @Assert\LessThanOrEqual(12)
+     * @Assert\NotBlank
      */
     private $mois;
 

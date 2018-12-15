@@ -32,4 +32,27 @@ class userRepository extends EntityRepository{
       $stmt->execute();
       return $stmt->fetchAll();
     }
+
+    public function findAllDays($idUser,$month,$year){
+      $conn=$this->getEntityManager()->getConnection();
+      $sql='SELECT * FROM deplacement,user,deplacement_jour WHERE user.id=:id AND deplacement.mois=:month AND deplacement.annee=:year AND user.id=deplacement.user_id AND deplacement.id=deplacement_jour.deplacement_id ';
+      $stmt=$conn->prepare($sql);
+      $stmt->bindParam(':id', $idUser);
+      $stmt->bindParam(':month', $month);
+      $stmt->bindParam(':year', $year);
+      $stmt->execute();
+      return $stmt->fetchAll();
+    }
+
+    public function sumEuroAndKM($id,$month,$year){
+      $conn=$this->getEntityManager()->getConnection();
+      $sql='SELECT sum(deplacement_jour.montant),sum(deplacement_jour.nb_km) FROM deplacement,user,deplacement_jour WHERE user.id=:id AND deplacement.mois=:month AND deplacement.annee=:year AND user.id=deplacement.user_id AND deplacement.id=deplacement_jour.deplacement_id ';
+      $stmt=$conn->prepare($sql);
+      $stmt->bindParam(':id', $idUser);
+      $stmt->bindParam(':month', $month);
+      $stmt->bindParam(':year', $year);
+      $stmt->execute();
+      return $stmt->fetchAll();
+    }
+
 }
