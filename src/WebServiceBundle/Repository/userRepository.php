@@ -8,7 +8,7 @@ use Doctrine\DBAL\Statement;
 class userRepository extends EntityRepository{
     public function findAllMonth($idUser){
       $conn=$this->getEntityManager()->getConnection();
-      $sql='SELECT * FROM deplacement WHERE deplacement.user_id=:id';
+      $sql='SELECT * FROM deplacement WHERE user_id=:id ';
       $stmt=$conn->prepare($sql);
       $stmt->bindParam(':id', $idUser);
       $stmt->execute();

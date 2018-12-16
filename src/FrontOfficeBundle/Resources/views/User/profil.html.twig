@@ -9,7 +9,7 @@
 
 					<div class="col-xs-12 col-sm-9">
 						<h4 class="blue">
-							<span class="middle">{{user.nom}} {{user.prenom}}</span>
+						<a href="{{path('edit_profil',{id:user.id})}}"	><span class="middle">{{user.nom}} {{user.prenom}}</span></a>
 						</h4>
 
 						<div class="profile-user-info">
@@ -60,7 +60,6 @@
 		<tr>
 			<th scope="col">Mois</th>
 			<th scope="col">Année</th>
-			<th scope="col">ID</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -70,7 +69,7 @@
 			<td>{{months[i].annee}}</td>
 			<td>
 				<a href="{{path('show_month',{id:user.id,month:months[i].mois,year:months[i].annee})}}" class="badge badge-primary">Voir mois</a>
-				<a href="{{path('delete_month',{idMonth:months[i].id})}}" class="badge badge-danger">Supprimer mois</a>
+				<!--<a href="path('delete_month',{idMonth:months[i].id})}}" class="badge badge-danger">Supprimer mois</a>-->
 			</td>
 		</tr>
 		{% endfor %}

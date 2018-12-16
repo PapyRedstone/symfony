@@ -10,7 +10,7 @@ use WebServiceBundle\Entity\User;
 use WebServiceBundle\Entity\Deplacement;
 use WebServiceBundle\Repository\userRepository;
 use WebServiceBundle\Form\DeplacementJourType;
-use WebServiceBundle\Form\UserType;
+use WebServiceBundle\Form\UserFrontType;
 
 class UserController extends Controller
 {
@@ -83,7 +83,7 @@ class UserController extends Controller
     ));
   }
 
-  public function deleteMonthAction(Deplacement $deplacement){
+  /*public function deleteMonthAction(Deplacement $deplacement){
     if (!$deplacement) {
       throw $this->createNotFoundException('No guest found');
     }
@@ -93,6 +93,29 @@ class UserController extends Controller
     $em->flush();
 
     return $this->redirect($this->generateUrl('FrontOfficeBundle:User:show.html.twig'));
+  }*/
+
+  public function editProfilAction($id,Request $request){
+    $em = $this->get('doctrine')->getManager();
+    $user=$em->getRepository('WebServiceBundle:User')->find($id);
+    $date = new \DateTime(date('Y-m-d H:i:s'));
+    $user->setUpdated($date);
+    $form = $this->createForm('WebServiceBundle\Form\UserFrontType',$user);
+    $form->handleRequest($request);
+
+    if($form->isSubmitted() && $form->isValid()){
+      $em=$this->getDoctrine()->getManager();
+      $em->persist($user);
+      $em->flush($user);
+
+      return $this->redirectToRoute('user_main_page',array(
+        'id'=>$user->getId()
+      ));
+    }
+
+    return $this->render('FrontOfficeBundle:User:editProfil.html.twig', array(
+      'form' => $form->createView(),
+    ));
   }
 
 }

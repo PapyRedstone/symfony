@@ -19,10 +19,11 @@
       {% for day in days %}
       {% if day.jour == i %}
       <td> Oui </td>
+      {% endif %}
+
       <td> Oui </td>
       <td>{{ day.nb_km }} KM</td>
       <td>{{ day.montant }} €</td>
-      {% endif %}
       {% endfor %}
     </tr>
     {% endfor %}

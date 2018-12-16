@@ -3,6 +3,7 @@
 namespace WebServiceBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * User
@@ -25,6 +26,7 @@ class User
      * @var string
      *
      * @ORM\Column(name="nom", type="string", length=100, nullable=true)
+     * @Assert\NotBlank
      */
     private $nom;
 
@@ -32,6 +34,7 @@ class User
      * @var string
      *
      * @ORM\Column(name="prenom", type="string", length=100, nullable=true)
+     * @Assert\NotBlank
      */
     private $prenom;
 
@@ -39,6 +42,7 @@ class User
      * @var string
      *
      * @ORM\Column(name="adresse", type="string", length=255, nullable=true)
+     * @Assert\NotBlank
      */
     private $adresse;
 
@@ -355,7 +359,11 @@ class User
         return $this->ville;
     }
 
-    public function __toString() {
+  /*  public function __toString() {
       return (string) $this->getId();
+    }*/
+
+    public function __toString() {
+      return (string) $this->nom." ".$this->prenom;
     }
 }

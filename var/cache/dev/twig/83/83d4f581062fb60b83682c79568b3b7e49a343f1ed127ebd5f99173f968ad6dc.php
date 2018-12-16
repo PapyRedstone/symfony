@@ -21,20 +21,20 @@ class __TwigTemplate_396228dabcc693b815916555f472151acd1263733088966332a1abc0d83
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d1502e23eb264fadf80e3ab167bd500354ac8a212cd654cbf3f660dbffb0bd16 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d1502e23eb264fadf80e3ab167bd500354ac8a212cd654cbf3f660dbffb0bd16->enter($__internal_d1502e23eb264fadf80e3ab167bd500354ac8a212cd654cbf3f660dbffb0bd16_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontOfficeBundle:User:profil.html.twig"));
+        $__internal_1a73df6b3ce02389d31bd150259f593c8cfb33f8803d23052cc9542d68cdfefb = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_1a73df6b3ce02389d31bd150259f593c8cfb33f8803d23052cc9542d68cdfefb->enter($__internal_1a73df6b3ce02389d31bd150259f593c8cfb33f8803d23052cc9542d68cdfefb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontOfficeBundle:User:profil.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_d1502e23eb264fadf80e3ab167bd500354ac8a212cd654cbf3f660dbffb0bd16->leave($__internal_d1502e23eb264fadf80e3ab167bd500354ac8a212cd654cbf3f660dbffb0bd16_prof);
+        $__internal_1a73df6b3ce02389d31bd150259f593c8cfb33f8803d23052cc9542d68cdfefb->leave($__internal_1a73df6b3ce02389d31bd150259f593c8cfb33f8803d23052cc9542d68cdfefb_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_60c9b1a231f7aa0061e68c4192cba02d8739f95ffa8ba88a5a33cd4f8c24be02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_60c9b1a231f7aa0061e68c4192cba02d8739f95ffa8ba88a5a33cd4f8c24be02->enter($__internal_60c9b1a231f7aa0061e68c4192cba02d8739f95ffa8ba88a5a33cd4f8c24be02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_de6f9cb3af92b4dfaf8c8add2c26c64078c68770c4ddbdc956cd0960ec51585b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_de6f9cb3af92b4dfaf8c8add2c26c64078c68770c4ddbdc956cd0960ec51585b->enter($__internal_de6f9cb3af92b4dfaf8c8add2c26c64078c68770c4ddbdc956cd0960ec51585b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "<div id=\"user-profile-2\" class=\"user-profile\">
@@ -45,12 +45,14 @@ class __TwigTemplate_396228dabcc693b815916555f472151acd1263733088966332a1abc0d83
 
 \t\t\t\t\t<div class=\"col-xs-12 col-sm-9\">
 \t\t\t\t\t\t<h4 class=\"blue\">
-\t\t\t\t\t\t\t<span class=\"middle\">";
+\t\t\t\t\t\t<a href=\"";
         // line 12
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("edit_profil", array("id" => $this->getAttribute(($context["user"] ?? $this->getContext($context, "user")), "id", array()))), "html", null, true);
+        echo "\"\t><span class=\"middle\">";
         echo twig_escape_filter($this->env, $this->getAttribute(($context["user"] ?? $this->getContext($context, "user")), "nom", array()), "html", null, true);
         echo " ";
         echo twig_escape_filter($this->env, $this->getAttribute(($context["user"] ?? $this->getContext($context, "user")), "prenom", array()), "html", null, true);
-        echo "</span>
+        echo "</span></a>
 \t\t\t\t\t\t</h4>
 
 \t\t\t\t\t\t<div class=\"profile-user-info\">
@@ -133,34 +135,30 @@ class __TwigTemplate_396228dabcc693b815916555f472151acd1263733088966332a1abc0d83
 \t\t<tr>
 \t\t\t<th scope=\"col\">Mois</th>
 \t\t\t<th scope=\"col\">Année</th>
-\t\t\t<th scope=\"col\">ID</th>
 \t\t</tr>
 \t</thead>
 \t<tbody>
 \t\t";
-        // line 67
+        // line 66
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(range(0, (twig_length_filter($this->env, ($context["nameMonths"] ?? $this->getContext($context, "nameMonths"))) - 1)));
         foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
-            // line 68
+            // line 67
             echo "\t\t<tr>
 \t\t\t<td>";
-            // line 69
+            // line 68
             echo twig_escape_filter($this->env, $this->getAttribute(($context["nameMonths"] ?? $this->getContext($context, "nameMonths")), $context["i"], array(), "array"), "html", null, true);
             echo "</td>
 \t\t\t<td>";
-            // line 70
+            // line 69
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["months"] ?? $this->getContext($context, "months")), $context["i"], array(), "array"), "annee", array()), "html", null, true);
             echo "</td>
 \t\t\t<td>
 \t\t\t\t<a href=\"";
-            // line 72
+            // line 71
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("show_month", array("id" => $this->getAttribute(($context["user"] ?? $this->getContext($context, "user")), "id", array()), "month" => $this->getAttribute($this->getAttribute(($context["months"] ?? $this->getContext($context, "months")), $context["i"], array(), "array"), "mois", array()), "year" => $this->getAttribute($this->getAttribute(($context["months"] ?? $this->getContext($context, "months")), $context["i"], array(), "array"), "annee", array()))), "html", null, true);
             echo "\" class=\"badge badge-primary\">Voir mois</a>
-\t\t\t\t<a href=\"";
-            // line 73
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("delete_month", array("idMonth" => $this->getAttribute($this->getAttribute(($context["months"] ?? $this->getContext($context, "months")), $context["i"], array(), "array"), "id", array()))), "html", null, true);
-            echo "\" class=\"badge badge-danger\">Supprimer mois</a>
+\t\t\t\t<!--<a href=\"path('delete_month',{idMonth:months[i].id})}}\" class=\"badge badge-danger\">Supprimer mois</a>-->
 \t\t\t</td>
 \t\t</tr>
 \t\t";
@@ -168,15 +166,15 @@ class __TwigTemplate_396228dabcc693b815916555f472151acd1263733088966332a1abc0d83
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 77
+        // line 76
         echo "\t</tbody>
 \t<a href=\"";
-        // line 78
+        // line 77
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("add_month", array("id" => $this->getAttribute(($context["user"] ?? $this->getContext($context, "user")), "id", array()))), "html", null, true);
         echo "\" ><button type=\"button\" class=\"btn btn-success\">Ajouter un nouveau mois</button></a>
 \t";
         
-        $__internal_60c9b1a231f7aa0061e68c4192cba02d8739f95ffa8ba88a5a33cd4f8c24be02->leave($__internal_60c9b1a231f7aa0061e68c4192cba02d8739f95ffa8ba88a5a33cd4f8c24be02_prof);
+        $__internal_de6f9cb3af92b4dfaf8c8add2c26c64078c68770c4ddbdc956cd0960ec51585b->leave($__internal_de6f9cb3af92b4dfaf8c8add2c26c64078c68770c4ddbdc956cd0960ec51585b_prof);
 
     }
 
@@ -192,7 +190,7 @@ class __TwigTemplate_396228dabcc693b815916555f472151acd1263733088966332a1abc0d83
 
     public function getDebugInfo()
     {
-        return array (  175 => 78,  172 => 77,  162 => 73,  158 => 72,  153 => 70,  149 => 69,  146 => 68,  142 => 67,  121 => 48,  112 => 46,  107 => 45,  98 => 43,  94 => 42,  82 => 33,  72 => 26,  62 => 19,  50 => 12,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  173 => 77,  170 => 76,  159 => 71,  154 => 69,  150 => 68,  147 => 67,  143 => 66,  123 => 48,  114 => 46,  109 => 45,  100 => 43,  96 => 42,  84 => 33,  74 => 26,  64 => 19,  50 => 12,  40 => 4,  34 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -216,7 +214,7 @@ class __TwigTemplate_396228dabcc693b815916555f472151acd1263733088966332a1abc0d83
 
 \t\t\t\t\t<div class=\"col-xs-12 col-sm-9\">
 \t\t\t\t\t\t<h4 class=\"blue\">
-\t\t\t\t\t\t\t<span class=\"middle\">{{user.nom}} {{user.prenom}}</span>
+\t\t\t\t\t\t<a href=\"{{path('edit_profil',{id:user.id})}}\"\t><span class=\"middle\">{{user.nom}} {{user.prenom}}</span></a>
 \t\t\t\t\t\t</h4>
 
 \t\t\t\t\t\t<div class=\"profile-user-info\">
@@ -267,7 +265,6 @@ class __TwigTemplate_396228dabcc693b815916555f472151acd1263733088966332a1abc0d83
 \t\t<tr>
 \t\t\t<th scope=\"col\">Mois</th>
 \t\t\t<th scope=\"col\">Année</th>
-\t\t\t<th scope=\"col\">ID</th>
 \t\t</tr>
 \t</thead>
 \t<tbody>
@@ -277,7 +274,7 @@ class __TwigTemplate_396228dabcc693b815916555f472151acd1263733088966332a1abc0d83
 \t\t\t<td>{{months[i].annee}}</td>
 \t\t\t<td>
 \t\t\t\t<a href=\"{{path('show_month',{id:user.id,month:months[i].mois,year:months[i].annee})}}\" class=\"badge badge-primary\">Voir mois</a>
-\t\t\t\t<a href=\"{{path('delete_month',{idMonth:months[i].id})}}\" class=\"badge badge-danger\">Supprimer mois</a>
+\t\t\t\t<!--<a href=\"path('delete_month',{idMonth:months[i].id})}}\" class=\"badge badge-danger\">Supprimer mois</a>-->
 \t\t\t</td>
 \t\t</tr>
 \t\t{% endfor %}
