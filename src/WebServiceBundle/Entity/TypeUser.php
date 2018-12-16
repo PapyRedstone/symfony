@@ -63,4 +63,8 @@ class TypeUser
     {
         return $this->typeUser;
     }
+
+    public function __toString(){
+      return (string) $this->typeUser;
+    }
 }

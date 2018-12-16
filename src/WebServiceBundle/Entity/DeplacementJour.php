@@ -83,7 +83,15 @@ class DeplacementJour
      */
     private $typeDeplacement;
 
-
+    /**
+      * @var \User
+      *
+      * @ORM\ManyToOne(targetEntity="User")
+      * @ORM\JoinColumns({
+      *      @ORM\JoinColumn(name="User_id",referencedColumnName="id")
+      * })
+      */
+  private $UserId;
 
     /**
      * Get id
@@ -285,5 +293,53 @@ class DeplacementJour
     public function getTypeDeplacement()
     {
         return $this->typeDeplacement;
+    }
+
+    /**
+     * Set internauteId
+     *
+     * @param \WebServiceBundle\Entity\User $internauteId
+     *
+     * @return DeplacementJour
+     */
+    public function setInternauteId(\WebServiceBundle\Entity\User $internauteId = null)
+    {
+        $this->internauteId = $internauteId;
+
+        return $this;
+    }
+
+    /**
+     * Get internauteId
+     *
+     * @return \WebServiceBundle\Entity\User
+     */
+    public function getInternauteId()
+    {
+        return $this->internauteId;
+    }
+
+    /**
+     * Set userId
+     *
+     * @param \WebServiceBundle\Entity\User $userId
+     *
+     * @return DeplacementJour
+     */
+    public function setUserId(\WebServiceBundle\Entity\User $userId = null)
+    {
+        $this->UserId = $userId;
+
+        return $this;
+    }
+
+    /**
+     * Get userId
+     *
+     * @return \WebServiceBundle\Entity\User
+     */
+    public function getUserId()
+    {
+        return $this->UserId;
     }
 }

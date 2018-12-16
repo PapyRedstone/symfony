@@ -1,1 +1,78 @@
-{{id}}
+{% extends "FrontOfficeBundle::base.html.twig" %}
+
+{% block body %}
+<div id="user-profile-2" class="user-profile">
+	<div class="tabbable">
+		<div class="tab-content no-border padding-24">
+			<div id="home" class="tab-pane in active">
+				<div class="row">
+
+					<div class="col-xs-12 col-sm-9">
+						<h4 class="blue">
+						<a href="{{path('edit_profil',{id:user.id})}}"	><span class="middle">{{user.nom}} {{user.prenom}}</span></a>
+						</h4>
+
+						<div class="profile-user-info">
+							<div class="profile-info-row">
+								<div class="profile-info-name"> Nom </div>
+								<div class="profile-info-value">
+									<span>{{user.nom}}</span>
+								</div>
+							</div>
+
+							<div class="profile-info-row">
+								<div class="profile-info-name"> Prénom </div>
+								<div class="profile-info-value">
+									<span>{{user.prenom}}</span>
+								</div>
+							</div>
+
+							<div class="profile-info-row">
+								<div class="profile-info-name"> Adresse </div>
+								<div class="profile-info-value">
+									<span>{{user.adresse}}</span>
+								</div>
+							</div>
+
+							<div class="profile-info-row">
+
+								<div class="profile-info-name"> Entreprise </div>
+
+								<div class="profile-info-value">
+									{% for society in societies %}
+									<span>{{society.societe}},</span>
+									{% endfor %}
+									{% for city in cities %}
+									<span>{{city.ville}}</span>
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th scope="col">Mois</th>
+			<th scope="col">Année</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for i in 0..(nameMonths|length)-1 %}
+		<tr>
+			<td>{{nameMonths[i]}}</td>
+			<td>{{months[i].annee}}</td>
+			<td>
+				<a href="{{path('show_month',{id:user.id,month:months[i].mois,year:months[i].annee})}}" class="badge badge-primary">Voir mois</a>
+				<!--<a href="path('delete_month',{idMonth:months[i].id})}}" class="badge badge-danger">Supprimer mois</a>-->
+			</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+	<a href="{{path('add_month',{id:user.id})}}" ><button type="button" class="btn btn-success">Ajouter un nouveau mois</button></a>
+	{% endblock body %}

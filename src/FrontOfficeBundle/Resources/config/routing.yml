@@ -7,3 +7,29 @@ user_main_page:
     defaults:  { _controller: FrontOfficeBundle:User:profil }
     requirements:
       id: '\d+'
+
+edit_profil:
+    path:     /editProfil/{id}
+    defaults:  { _controller: FrontOfficeBundle:User:editProfil }
+    requirements:
+      id: '\d+'
+
+show_month:
+    path:     /show/{id}/{month}/{year}
+    defaults:  { _controller: FrontOfficeBundle:User:show }
+    requirements:
+      id: '\d+'
+      month: '\d+'
+      year: '\d+'
+
+add_month:
+    path:     /addMonth/{id}
+    defaults:  { _controller: FrontOfficeBundle:User:addMonth }
+    requirements:
+      id: '\d+'
+
+delete_month:
+    path:     /deleteMonth/{idMonth}
+    defaults:  { _controller: FrontOfficeBundle:User:deleteMonth }
+    requirements:
+      idMonth: '\d+'
