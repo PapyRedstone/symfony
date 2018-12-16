@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Deplacement
  *
  * @ORM\Table(name="deplacement", indexes={@ORM\Index(name="fk_deplacement_user1_idx", columns={"user_id"}), @ORM\Index(name="fk_deplacement_user2_idx", columns={"user_id1"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="WebServiceBundle\Repository\DeplacementRepository")
  */
 class Deplacement
 {

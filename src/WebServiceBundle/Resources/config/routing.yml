@@ -2,11 +2,20 @@ web_service_homepage:
     path:     /
     defaults: { _controller: WebServiceBundle:Default:index }
 
-web_service_a:
-    path:     /
-    defaults: { _controller: WebServiceBundle:Default:index }
+web_service_deplacements:
+    path:     /deplacements
+    defaults: { _controller: WebServiceBundle:REST:listDeplacement }
 
-web_service_homepage:
-    path:     /
-    defaults: { _controller: WebServiceBundle:Default:index }
+web_service_deplacements_id:
+    path:     /deplacements/user/{id}
+    defaults: { _controller: WebServiceBundle:REST:listDeplacementID }
+    requirements:
+        id:   '\d+'
 
+web_service_deplacements_annee:
+    path:     /deplacements/user/{user}/annee/{annee}/mois/{mois}
+    defaults: { _controller: WebServiceBundle:REST:listDeplacementUAM }
+    requirements:
+        user:  '\d+'
+        annee: '\d+'
+        mois:  '\d+'
