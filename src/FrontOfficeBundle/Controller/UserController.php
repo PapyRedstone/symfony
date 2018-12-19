@@ -6,11 +6,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Validator\Constraints\DateTime;
 use Doctrine\ORM\EntityManagerInterface;
-use WebServiceBundle\Entity\User;
+use WebServiceBundle\Entity\UserFront;
 use WebServiceBundle\Entity\Deplacement;
 use WebServiceBundle\Repository\userRepository;
-use WebServiceBundle\Form\DeplacementJourType;
-use WebServiceBundle\Form\UserFrontType;
+use FrontOfficeBundle\Form\UserFrontType;
+use FrontOfficeBundle\Form\DeplacementType;
 
 class UserController extends Controller
 {
@@ -60,21 +60,21 @@ class UserController extends Controller
     $em=$this->get('doctrine')->getManager();
     $date = new \DateTime(date('Y-m-d H:i:s'));
     $deplacement = new Deplacement();
-    $user = new User();
+    $user = new UserFront();
     $user=$em->getRepository('WebServiceBundle:User')->findOneById((int)$id);
-    $deplacement->setUser($user);
-    $deplacement->setCreated($date);
-    $deplacement->setUpdated($date);
-    $form = $this->createForm('WebServiceBundle\Form\DeplacementType',$deplacement);
+    $form = $this->createForm('FrontOfficeBundle\Form\DeplacementType',$deplacement);
     $form->handleRequest($request);
 
     if($form->isSubmitted() && $form->isValid()){
-      $em=$this->getDoctrine()->getManager();
+      $deplacement->setUser($user);
+      $deplacement->setCreated($date);
+      $deplacement->setUpdated($date);
+
       $em->persist($deplacement);
       $em->flush($deplacement);
 
       return $this->redirectToRoute('user_main_page',array(
-        'id'=>$deplacement->getUser()
+        'id'=>$id
       ));
     }
 
@@ -83,24 +83,12 @@ class UserController extends Controller
     ));
   }
 
-  /*public function deleteMonthAction(Deplacement $deplacement){
-    if (!$deplacement) {
-      throw $this->createNotFoundException('No guest found');
-    }
-
-    $em = $this->get('doctrine')->getManager();
-    $em->remove($deplacement);
-    $em->flush();
-
-    return $this->redirect($this->generateUrl('FrontOfficeBundle:User:show.html.twig'));
-  }*/
-
   public function editProfilAction($id,Request $request){
     $em = $this->get('doctrine')->getManager();
     $user=$em->getRepository('WebServiceBundle:User')->find($id);
     $date = new \DateTime(date('Y-m-d H:i:s'));
     $user->setUpdated($date);
-    $form = $this->createForm('WebServiceBundle\Form\UserFrontType',$user);
+    $form = $this->createForm('FrontOfficeBundle\Form\UserFrontType',$user);
     $form->handleRequest($request);
 
     if($form->isSubmitted() && $form->isValid()){

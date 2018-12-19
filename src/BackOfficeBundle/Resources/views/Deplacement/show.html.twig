@@ -1,0 +1,37 @@
+{% extends 'BackOfficeBundle::base.html.twig' %}
+
+{% block body %}
+    <h2 class="blue">Deplacement list</h2>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Année</th>
+                <th scope="col">Mois</th>
+                <th scope="col">Validé ?</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for i in 0..(nameMonths|length)-1 %}
+            <tr>
+                <td>{{ months[i].annee }}</td>
+                <td>{{ nameMonths[i]}}</td>
+                {% if months[i].validation == 1 %}
+                  <td>Oui</td>
+                {% endif %}
+                {% if months[i].validation == 0 %}
+                  <td>Non</td>
+                {% endif %}
+                <td> <a href="{{path('back_office_deplacement_detail',{idUser:id,idMonth:months[i].id})}}" class="badge badge-primary"> Detail </a> </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('back_office_deplacement_index') }}" class="badge badge-primary">Back</a>
+        </li>
+    </ul>
+
+{% endblock %}

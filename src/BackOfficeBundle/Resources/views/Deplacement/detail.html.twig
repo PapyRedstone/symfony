@@ -1,0 +1,50 @@
+{% extends 'BackOfficeBundle::base.html.twig' %}
+
+{% block body %}
+    <h2 class="blue">Deplacement detailed list</h2>
+
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <th scope="col">Id</th>
+                <td>{{ month.id }}</td>
+            </tr>
+            <tr>
+                <th scope="col">Mois</th>
+                <td>{{ month.mois }}</td>
+            </tr>
+            <tr>
+                <th scope="col">Annee</th>
+                <td>{{ month.annee }}</td>
+            </tr>
+            <tr>
+                <th scope="col">Date de validation</th>
+                <td>{% if month.dateValidation %} {{ month.dateValidation| date('Y-m-d H:i:s')}} {% endif %}</td>
+            </tr>
+            <tr>
+                <th scope="col">Date de création</th>
+                <td>{% if month.created %} {{ month.created| date('Y-m-d H:i:s')}} {% endif %}</td>
+            </tr>
+            <tr>
+                <th scope="col">Date de mise à jour</th>
+                <td>{% if month.updated %}{{ month.updated| date('Y-m-d H:i:s')}} {% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    {% if idUser == 1 %}
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <button type="submit" value="Save" class="btn btn-success"> Save </button>
+    {{form_end(form) }}-->
+
+    {% endif %}
+
+    <ul>
+        <li>
+            <a href="{{ path('back_office_deplacement_show',{id:idUser}) }}" class="badge badge-primary">Back to the list</a>
+        </li>
+    </ul>
+
+  {% endblock %}

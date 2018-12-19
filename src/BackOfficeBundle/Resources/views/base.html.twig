@@ -1,17 +1,52 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8" />
-  <title>{% block title %}PROJET SYMF{% endblock %}</title>
-  {% block stylesheets %}{% endblock %}
-  <link rel="stylesheet" type="text/css" href="{{ asset('style/style.css') }}" />
-  <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}PROJET SYMF - BackOffice{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('style/style.css') }}" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    <link rel="stylesheet" href="{{ asset('style/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
-</head>
-<body>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{{path('back_office_homepage')}}"><i class="fa fa-home"></i></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{{path('back_office_user_index')}}">User</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{{path('back_office_societe_index')}}">Societe</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{{path('back_office_service_index')}}">Service</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{{path('back_office_stats_index')}}">Statistiques</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{{path('back_office_deplacement_index')}}">Deplacement</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     {% block body %}{% endblock %}
     {% block javascripts %}{% endblock %}
+    <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                Mentions légales
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
+  </body>
   </html>

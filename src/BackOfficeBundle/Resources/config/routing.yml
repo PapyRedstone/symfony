@@ -4,82 +4,104 @@ back_office_homepage:
 
 back_office_user_index:
     path:     /user
-    defaults: { _controller: "WebServiceBundle:User:index" }
+    defaults: { _controller: BackOfficeBundle:User:index }
     methods:  GET
 
 back_office_user_show:
     path:     /user/{id}/show
-    defaults: { _controller: "WebServiceBundle:User:show" }
+    defaults: { _controller: BackOfficeBundle:User:show }
     methods:  GET
 
 back_office_user_show_movement:
     path:     /user/{id}/movement
-    defaults: { _controller: "BackOfficeBundle:Default:showMovement" }
+    defaults: { _controller: BackOfficeBundle:User:showMovement }
     methods:  GET
     requirements:
       id: '\d+'
 
 back_office_user_new:
     path:     /user/new
-    defaults: { _controller: "WebServiceBundle:User:new" }
+    defaults: { _controller: BackOfficeBundle:User:new }
     methods:  [GET, POST]
 
 back_office_user_edit:
     path:     /user/{id}/edit
-    defaults: { _controller: "WebServiceBundle:User:edit" }
+    defaults: { _controller: BackOfficeBundle:User:edit }
     methods:  [GET, POST]
 
 back_office_user_delete:
     path:     /user/{id}/delete
-    defaults: { _controller: "WebServiceBundle:User:delete" }
+    defaults: { _controller: BackOfficeBundle:User:delete }
     methods:  DELETE
 
 back_office_societe_index:
     path:     /societe
-    defaults: { _controller: "WebServiceBundle:Societe:index" }
+    defaults: { _controller: BackOfficeBundle:Societe:index }
     methods:  GET
 
 back_office_societe_show:
     path:     /societe{id}/show
-    defaults: { _controller: "WebServiceBundle:Societe:show" }
+    defaults: { _controller: BackOfficeBundle:Societe:show }
     methods:  GET
 
 back_office_societe_new:
     path:     /societe/new
-    defaults: { _controller: "WebServiceBundle:Societe:new" }
+    defaults: { _controller: BackOfficeBundle:Societe:new }
     methods:  [GET, POST]
 
 back_office_societe_edit:
     path:     /societe/{id}/edit
-    defaults: { _controller: "WebServiceBundle:Societe:edit" }
+    defaults: { _controller: BackOfficeBundle:Societe:edit }
     methods:  [GET, POST]
 
 back_office_societe_delete:
     path:     /societe/{id}/delete
-    defaults: { _controller: "WebServiceBundle:Societe:delete" }
+    defaults: { _controller: BackOfficeBundle:Societe:delete }
     methods:  DELETE
 
 back_office_service_index:
     path:     /service
-    defaults: { _controller: "WebServiceBundle:Service:index" }
+    defaults: { _controller: BackOfficeBundle:Service:index }
     methods:  GET
 
 back_office_service_show:
     path:     /service/{id}/show
-    defaults: { _controller: "WebServiceBundle:Service:show" }
+    defaults: { _controller: BackOfficeBundle:Service:show }
     methods:  GET
 
 back_office_service_new:
     path:     /service/new
-    defaults: { _controller: "WebServiceBundle:Service:new" }
+    defaults: { _controller: BackOfficeBundle:Service:new }
     methods:  [GET, POST]
 
 back_office_service_edit:
     path:     /service/{id}/edit
-    defaults: { _controller: "WebServiceBundle:Service:edit" }
+    defaults: { _controller: BackOfficeBundle:Service:edit }
     methods:  [GET, POST]
 
 back_office_service_delete:
     path:     /service/{id}/delete
-    defaults: { _controller: "WebServiceBundle:Service:delete" }
+    defaults: { _controller: BackOfficeBundle:Service:delete }
     methods:  DELETE
+
+
+back_office_deplacement_index:
+    path:     /deplacement
+    defaults: { _controller: BackOfficeBundle:Deplacement:index}
+
+back_office_deplacement_show:
+    path:     /deplacement/show/{id}
+    defaults: { _controller: BackOfficeBundle:Deplacement:showDeplacement}
+    requirements:
+      id: '\d+'
+
+back_office_deplacement_detail:
+    path:     /deplacement/detail/{idUser}/{idMonth}
+    defaults: { _controller: BackOfficeBundle:Deplacement:showDetailedDeplacement}
+    requirements:
+      idUser: '\d+'
+      idMonth: '\d+'
+
+back_office_stats_index:
+    path:   /stats
+    defaults: { _controller: BackOfficeBundle:Stats:index}

@@ -1,0 +1,46 @@
+{% extends 'BackOfficeBundle::base.html.twig' %}
+
+{% block body %}
+    <h2 class="blue">Users list</h2>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Prenom</th>
+                <th scope="col">Adresse</th>
+                <th scope="col">Distanceinit</th>
+                <th scope="col">Created</th>
+                <th scope="col">Updated</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td><a href="{{ path('back_office_user_show', { 'id': user.id }) }}">{{ user.id }}</a></td>
+                <td>{{ user.nom }}</td>
+                <td>{{ user.prenom }}</td>
+                <td>{{ user.adresse }}</td>
+                <td>{{ user.distanceInit }}</td>
+                <td>{% if user.created %}{{ user.created|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if user.updated %}{{ user.updated|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('back_office_user_show', { 'id': user.id }) }}" class="badge badge-primary">Show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('back_office_user_edit', { 'id': user.id }) }}" class="badge badge-secondary">Edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <ul>
+            <a href="{{ path('back_office_user_new') }}"><button class="btn btn-success">Create a new user</button></a>
+    </ul>
+{% endblock %}

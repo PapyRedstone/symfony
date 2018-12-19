@@ -1,0 +1,36 @@
+{% extends 'BackOfficeBundle::base.html.twig' %}
+
+{% block body %}
+    <h2 class="blue">Services list</h2>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Service</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for service in services %}
+            <tr>
+                <td><a href="{{ path('back_office_service_show', { 'id': service.id }) }}">{{ service.id }}</a></td>
+                <td>{{ service.service }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('back_office_service_show', { 'id': service.id }) }}" class="badge badge-primary">Show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('back_office_service_edit', { 'id': service.id }) }}" class="badge badge-secondary">Edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <ul>
+            <a href="{{ path('back_office_user_new') }}"><button class="btn btn-success">Create a new service</button></a>
+    </ul>
+{% endblock %}

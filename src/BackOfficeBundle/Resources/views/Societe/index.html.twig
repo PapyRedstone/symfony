@@ -1,0 +1,39 @@
+{% extends 'BackOfficeBundle::base.html.twig' %}
+
+{% block body %}
+    <h2 class="blue">Societies list</h2>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Societe</th>
+                <th scope="col">Adresse</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for societe in societes %}
+            <tr>
+                <td><a href="{{ path('back_office_societe_show', { 'id': societe.id }) }}">{{ societe.id }}</a></td>
+                <td>{{ societe.societe }}</td>
+                <td>{{ societe.adresse }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('back_office_societe_show', { 'id': societe.id }) }}" class="badge badge-primary">Show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('back_office_societe_edit', { 'id': societe.id }) }}" class="badge badge-secondary">Edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+            <a href="{{ path('back_office_user_new') }}"><button class="btn btn-success">Create a new society</button></a>
+    </ul>
+{% endblock %}

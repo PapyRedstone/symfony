@@ -1,0 +1,41 @@
+{% extends 'BackOfficeBundle::base.html.twig' %}
+
+{% block body %}
+    <h2 class="blue">Stats</h2>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Ville</th>
+                <th scope="col">User</th>
+            </tr>
+        </thead>
+        <tbody>
+          {% for num in number %}
+            <tr>
+                <td>{{ num.ville }}</td>
+                <td>{{ num.nbre_user}}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Societe</th>
+                <th scope="col">KM</th>
+                <th scope="col">User</th>
+            </tr>
+        </thead>
+        <tbody>
+          {% for kilom in kilometers %}
+            <tr>
+                <td>{{ kilom.societe }}</td>
+                <td>{{ kilom.nb_km }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

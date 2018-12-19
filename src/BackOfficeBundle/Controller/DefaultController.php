@@ -10,8 +10,4 @@ class DefaultController extends Controller
     {
         return $this->render('BackOfficeBundle:Default:index.html.twig');
     }
-
-    public function showMovementAction(){
-        return $this->render('BackOfficeBundle:Default:showMovement.html.twig');
-    }
 }

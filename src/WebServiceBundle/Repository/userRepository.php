@@ -8,9 +8,17 @@ use Doctrine\DBAL\Statement;
 class userRepository extends EntityRepository{
     public function findAllMonth($idUser){
       $conn=$this->getEntityManager()->getConnection();
-      $sql='SELECT * FROM deplacement WHERE user_id=:id ';
+      $sql='SELECT * FROM deplacement WHERE user_id=:id';
       $stmt=$conn->prepare($sql);
       $stmt->bindParam(':id', $idUser);
+      $stmt->execute();
+      return $stmt->fetchAll();
+    }
+
+    public function findAllMonths(){
+      $conn=$this->getEntityManager()->getConnection();
+      $sql='SELECT * FROM deplacement ';
+      $stmt=$conn->prepare($sql);
       $stmt->execute();
       return $stmt->fetchAll();
     }
@@ -46,7 +54,7 @@ class userRepository extends EntityRepository{
 
     public function sumEuroAndKM($id,$month,$year){
       $conn=$this->getEntityManager()->getConnection();
-      $sql='SELECT sum(deplacement_jour.montant),sum(deplacement_jour.nb_km) FROM deplacement,user,deplacement_jour WHERE user.id=:id AND deplacement.mois=:month AND deplacement.annee=:year AND user.id=deplacement.user_id AND deplacement.id=deplacement_jour.deplacement_id ';
+      $sql='SELECT sum(deplacement_jour.montant) sumMontant ,sum(deplacement_jour.nb_km) sumKM FROM deplacement,user,deplacement_jour WHERE user.id=:id AND deplacement.mois=:month AND deplacement.annee=:year AND user.id=deplacement.user_id AND deplacement.id=deplacement_jour.deplacement_id ';
       $stmt=$conn->prepare($sql);
       $stmt->bindParam(':id', $idUser);
       $stmt->bindParam(':month', $month);

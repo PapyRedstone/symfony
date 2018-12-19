@@ -1,4 +1,4 @@
-{% extends "FrontOfficeBundle::base.html.twig" %}
+{% extends 'FrontOfficeBundle::base.html.twig' %}
 
 {% block body %}
 <table class="table table-bordered">
@@ -17,13 +17,12 @@
       <td>{{monthdays[i-1]}}</td>
       <td>{{i}}</td>
       {% for day in days %}
-      {% if day.jour == i %}
-      <td> Oui </td>
-      {% endif %}
-
-      <td> Oui </td>
-      <td>{{ day.nb_km }} KM</td>
-      <td>{{ day.montant }} €</td>
+        {% if day.jour == i %}
+          <td> Oui </td>
+          <td> Oui </td>
+          <td>{{ day.nb_km }} KM</td>
+          <td>{{ day.montant }} €</td>
+        {% endif %}
       {% endfor %}
     </tr>
     {% endfor %}

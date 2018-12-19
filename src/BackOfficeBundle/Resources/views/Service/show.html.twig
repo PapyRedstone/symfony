@@ -1,0 +1,32 @@
+{% extends 'BackOfficeBundle::base.html.twig' %}
+
+{% block body %}
+    <h2 class="blue">Service</h2>
+
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <th scope="col">Id</th>
+                <td>{{ service.id }}</td>
+            </tr>
+            <tr>
+                <th scope="col">Service</th>
+                <td>{{ service.service }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('back_office_service_index') }}" class="badge badge-primary">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('back_office_service_edit', { 'id': service.id }) }}" class="badge badge-secondary">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+            <button type="submit" value="Delete" class="btn btn-danger">  Delete </button>
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

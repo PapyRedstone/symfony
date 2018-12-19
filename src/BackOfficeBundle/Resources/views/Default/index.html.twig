@@ -1,1 +1,19 @@
-Hello World! 52
+{% extends 'BackOfficeBundle::base.html.twig' %}
+
+{% block body %}
+
+<h2 class="blue"> Welcome ! Vous pouvez visualiser les BDD suivantes. </h2>
+
+<div class="row">
+  <div class="col-4">
+    <div class="list-group" id="list-tab" role="tablist">
+      <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="{{path('back_office_user_index')}}" role="tab" aria-controls="home">User</a>
+      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="{{path('back_office_societe_index')}}" role="tab" aria-controls="profile">Societe</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="{{path('back_office_service_index')}}" role="tab" aria-controls="messages">Service</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="{{path('back_office_stats_index')}}" role="tab" aria-controls="messages">Statistique</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="{{path('back_office_deplacement_index')}}" role="tab" aria-controls="messages">Deplacement</a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
