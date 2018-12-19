@@ -40,9 +40,6 @@ class RESTController extends Controller{
     }
 
     public function listDeplacementUAMAction($user,$annee,$mois){
-        var_dump($user);
-        var_dump($annee);
-        var_dump($mois);
         $em = $this->get("doctrine")->getManager();
         
         $depl = $em->getRepository("WebServiceBundle:Deplacement")->getByUAM($user,$annee,$mois);
