@@ -210,4 +210,15 @@ class TypeUser extends \WebServiceBundle\Entity\TypeUser implements \Doctrine\OR
         return parent::getTypeUser();
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function __toString()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', []);
+
+        return parent::__toString();
+    }
+
 }

@@ -15,14 +15,14 @@ class __TwigTemplate_c6b4bc6ca7c6437b630caec76508a94625519c0f7b92e6a7eb39c039631
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_b5abc01dd196c2b79a478d38ec78bdc74915b83fb873b56605abf3e41016d9d2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_b5abc01dd196c2b79a478d38ec78bdc74915b83fb873b56605abf3e41016d9d2->enter($__internal_b5abc01dd196c2b79a478d38ec78bdc74915b83fb873b56605abf3e41016d9d2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebServiceBundle:Default:index.html.twig"));
+        $__internal_dce5b4560f5066d9af07f70d315c3aebead595286e89f5fb80600bf6b9110d1e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_dce5b4560f5066d9af07f70d315c3aebead595286e89f5fb80600bf6b9110d1e->enter($__internal_dce5b4560f5066d9af07f70d315c3aebead595286e89f5fb80600bf6b9110d1e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebServiceBundle:Default:index.html.twig"));
 
         // line 1
         echo "Hello World! FROM API
 ";
         
-        $__internal_b5abc01dd196c2b79a478d38ec78bdc74915b83fb873b56605abf3e41016d9d2->leave($__internal_b5abc01dd196c2b79a478d38ec78bdc74915b83fb873b56605abf3e41016d9d2_prof);
+        $__internal_dce5b4560f5066d9af07f70d315c3aebead595286e89f5fb80600bf6b9110d1e->leave($__internal_dce5b4560f5066d9af07f70d315c3aebead595286e89f5fb80600bf6b9110d1e_prof);
 
     }
 

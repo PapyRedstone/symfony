@@ -29,12 +29,10 @@ class DeplacementRepository extends EntityRepository{
             ->getRepository("WebServiceBundle:Deplacement")
             ->createQueryBuilder("u")
             ->select("u.annee,u.mois")
-            ->where("u.annee = :annee")
-            ->where("u.mois = 1")
-            //->setParameter("mois",1)
-            ->where("u.user = 2")
-            //->setParameter("user",2)
+            ->where("u.annee = :annee AND u.mois = :mois AND u.user = :user")
             ->setParameter("annee",2018)
+            ->setParameter("mois",1)
+            ->setParameter("user",2)
             ->getQuery()
             ->getResult();
     }

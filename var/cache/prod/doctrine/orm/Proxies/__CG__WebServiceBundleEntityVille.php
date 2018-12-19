@@ -232,4 +232,15 @@ class Ville extends \WebServiceBundle\Entity\Ville implements \Doctrine\ORM\Prox
         return parent::getCp();
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function __toString()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', []);
+
+        return parent::__toString();
+    }
+
 }

@@ -254,4 +254,15 @@ class Societe extends \WebServiceBundle\Entity\Societe implements \Doctrine\ORM\
         return parent::getVille();
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function __toString()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', []);
+
+        return parent::__toString();
+    }
+
 }

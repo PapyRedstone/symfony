@@ -21,20 +21,20 @@ class __TwigTemplate_48e519efa238a106a14f3d5f8b9c0bcbf526bbc8a29687fca0d1575938c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2f75e757d0f7bc2e0c22d4fc2bd14d9b6e28c9424215543b7d67518d1315e0cf = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_2f75e757d0f7bc2e0c22d4fc2bd14d9b6e28c9424215543b7d67518d1315e0cf->enter($__internal_2f75e757d0f7bc2e0c22d4fc2bd14d9b6e28c9424215543b7d67518d1315e0cf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":service:edit.html.twig"));
+        $__internal_66b51243ac765783b173b5f002a12e79f75250ca5b5ba059427dd92716348f1a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_66b51243ac765783b173b5f002a12e79f75250ca5b5ba059427dd92716348f1a->enter($__internal_66b51243ac765783b173b5f002a12e79f75250ca5b5ba059427dd92716348f1a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":service:edit.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_2f75e757d0f7bc2e0c22d4fc2bd14d9b6e28c9424215543b7d67518d1315e0cf->leave($__internal_2f75e757d0f7bc2e0c22d4fc2bd14d9b6e28c9424215543b7d67518d1315e0cf_prof);
+        $__internal_66b51243ac765783b173b5f002a12e79f75250ca5b5ba059427dd92716348f1a->leave($__internal_66b51243ac765783b173b5f002a12e79f75250ca5b5ba059427dd92716348f1a_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_88f35696c6058970e29dd0f20a1ccb0697f149081d675f7e08dddcab17e40d96 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_88f35696c6058970e29dd0f20a1ccb0697f149081d675f7e08dddcab17e40d96->enter($__internal_88f35696c6058970e29dd0f20a1ccb0697f149081d675f7e08dddcab17e40d96_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_57400c9027757e12f01a3402b65d792448e56c8b244e901c62ddfaeba32b0e76 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_57400c9027757e12f01a3402b65d792448e56c8b244e901c62ddfaeba32b0e76->enter($__internal_57400c9027757e12f01a3402b65d792448e56c8b244e901c62ddfaeba32b0e76_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    <h1>Service edit</h1>
@@ -74,7 +74,7 @@ class __TwigTemplate_48e519efa238a106a14f3d5f8b9c0bcbf526bbc8a29687fca0d1575938c
     </ul>
 ";
         
-        $__internal_88f35696c6058970e29dd0f20a1ccb0697f149081d675f7e08dddcab17e40d96->leave($__internal_88f35696c6058970e29dd0f20a1ccb0697f149081d675f7e08dddcab17e40d96_prof);
+        $__internal_57400c9027757e12f01a3402b65d792448e56c8b244e901c62ddfaeba32b0e76->leave($__internal_57400c9027757e12f01a3402b65d792448e56c8b244e901c62ddfaeba32b0e76_prof);
 
     }
 

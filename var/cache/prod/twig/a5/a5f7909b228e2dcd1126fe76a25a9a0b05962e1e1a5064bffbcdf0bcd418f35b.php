@@ -1,7 +1,7 @@
 <?php
 
-/* TwigBundle:Exception:error.html.twig */
-class __TwigTemplate_48e6b7ab531d90f11af9691dc575dc8d9dfa23508ad5b5f8f6cb871a784c2451 extends Twig_Template
+/* @Twig/Exception/error.html.twig */
+class __TwigTemplate_0ab9d3c31a38a0c8df5b81e08ea5a171fc156a0698d775397a364483d234b7de extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -48,7 +48,7 @@ class __TwigTemplate_48e6b7ab531d90f11af9691dc575dc8d9dfa23508ad5b5f8f6cb871a784
 
     public function getTemplateName()
     {
-        return "TwigBundle:Exception:error.html.twig";
+        return "@Twig/Exception/error.html.twig";
     }
 
     public function isTraitable()
@@ -71,6 +71,6 @@ class __TwigTemplate_48e6b7ab531d90f11af9691dc575dc8d9dfa23508ad5b5f8f6cb871a784
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "TwigBundle:Exception:error.html.twig", "/var/www/html/symfony/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.html.twig");
+        return new Twig_Source("", "@Twig/Exception/error.html.twig", "/home/alex/Documents/symfony/symfony/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.html.twig");
     }
 }
