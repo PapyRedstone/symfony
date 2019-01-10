@@ -151,7 +151,7 @@ class __TwigTemplate_030b7b669ee16100d473fa7e505685e49f6c09bfa689dc820c82b150b12
                 echo "\t\t\t\t<td>
 \t\t\t\t\t<a href=\"";
                 // line 72
-                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("show_month", array("idMonth" => $this->getAttribute($context["month"], "id", array()), "month" => $this->getAttribute($context["month"], "mois", array()), "year" => $this->getAttribute($context["month"], "annee", array()), "idUser" => $this->getAttribute(($context["user"] ?? null), "id", array()))), "html", null, true);
+                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("show_month", array("idMonth" => $this->getAttribute($context["month"], "id", array()), "idUser" => $this->getAttribute(($context["user"] ?? null), "id", array()))), "html", null, true);
                 echo "\" class=\"badge badge-primary\">Voir mois</a>
 \t\t\t\t</td>
 \t\t\t";
@@ -169,6 +169,7 @@ class __TwigTemplate_030b7b669ee16100d473fa7e505685e49f6c09bfa689dc820c82b150b12
         // line 78
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("add_month", array("id" => $this->getAttribute(($context["user"] ?? null), "id", array()))), "html", null, true);
         echo "\" ><button type=\"button\" class=\"btn btn-success\">Ajouter un nouveau mois</button></a>
+
 \t";
     }
 

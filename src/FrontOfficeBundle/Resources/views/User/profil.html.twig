@@ -69,11 +69,12 @@
 				<td>{{month.annee}}</td>
 		{% if month.validation == 0 %}
 				<td>
-					<a href="{{path('show_month',{idMonth:month.id,month:month.mois,year:month.annee,idUser:user.id})}}" class="badge badge-primary">Voir mois</a>
+					<a href="{{path('show_month',{idMonth:month.id,idUser:user.id})}}" class="badge badge-primary">Voir mois</a>
 				</td>
 			{% endif %}
 		</tr>
 		{% endfor %}
 	</tbody>
 	<a href="{{path('add_month',{id:user.id})}}" ><button type="button" class="btn btn-success">Ajouter un nouveau mois</button></a>
+
 	{% endblock body %}

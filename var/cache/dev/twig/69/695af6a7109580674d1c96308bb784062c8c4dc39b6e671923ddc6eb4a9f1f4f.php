@@ -21,20 +21,20 @@ class __TwigTemplate_1b6fb8868e8ed684c4a44bd212d12b926826ada3c934dedf77ba003d554
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_7b8372697d0e22927126a377d0a04813795992c9c4a98ae1f6b6ab9238590c65 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_7b8372697d0e22927126a377d0a04813795992c9c4a98ae1f6b6ab9238590c65->enter($__internal_7b8372697d0e22927126a377d0a04813795992c9c4a98ae1f6b6ab9238590c65_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontOfficeBundle:User:show.html.twig"));
+        $__internal_9c51abf57b47a34c0ca489e9d906f4d64f53136be40301e1bfcfd5f9df406fc2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9c51abf57b47a34c0ca489e9d906f4d64f53136be40301e1bfcfd5f9df406fc2->enter($__internal_9c51abf57b47a34c0ca489e9d906f4d64f53136be40301e1bfcfd5f9df406fc2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontOfficeBundle:User:show.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_7b8372697d0e22927126a377d0a04813795992c9c4a98ae1f6b6ab9238590c65->leave($__internal_7b8372697d0e22927126a377d0a04813795992c9c4a98ae1f6b6ab9238590c65_prof);
+        $__internal_9c51abf57b47a34c0ca489e9d906f4d64f53136be40301e1bfcfd5f9df406fc2->leave($__internal_9c51abf57b47a34c0ca489e9d906f4d64f53136be40301e1bfcfd5f9df406fc2_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_f06dcc71c3b6e9fdd87279a5bff6092ffeed5a2119feff4347537590817582b6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_f06dcc71c3b6e9fdd87279a5bff6092ffeed5a2119feff4347537590817582b6->enter($__internal_f06dcc71c3b6e9fdd87279a5bff6092ffeed5a2119feff4347537590817582b6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_9700ea416862ae66d7ab76c375b34142fcc1f1eede34602a33faf1a1452f994b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9700ea416862ae66d7ab76c375b34142fcc1f1eede34602a33faf1a1452f994b->enter($__internal_9700ea416862ae66d7ab76c375b34142fcc1f1eede34602a33faf1a1452f994b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "
@@ -95,7 +95,7 @@ class __TwigTemplate_1b6fb8868e8ed684c4a44bd212d12b926826ada3c934dedf77ba003d554
                     echo " €</td>
             <td> <a href=\"";
                     // line 29
-                    echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("edit_day", array("idDay" => $this->getAttribute($context["day"], "id", array()), "idMonth" => ($context["idMonth"] ?? $this->getContext($context, "idMonth")), "month" => ($context["month"] ?? $this->getContext($context, "month")), "year" => ($context["year"] ?? $this->getContext($context, "year")), "idUser" => ($context["idUser"] ?? $this->getContext($context, "idUser")))), "html", null, true);
+                    echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("edit_day", array("idDay" => $this->getAttribute($context["day"], "id", array()), "idMonth" => ($context["idMonth"] ?? $this->getContext($context, "idMonth")), "idUser" => ($context["idUser"] ?? $this->getContext($context, "idUser")))), "html", null, true);
                     echo "\" class=\"badge badge-secondary\"> Edit </a> </td>
         ";
                 }
@@ -122,14 +122,14 @@ class __TwigTemplate_1b6fb8868e8ed684c4a44bd212d12b926826ada3c934dedf77ba003d554
         echo "</th>
       <th>Total Montant : ";
         // line 38
-        echo twig_escape_filter($this->env, $this->getAttribute(($context["addition"] ?? $this->getContext($context, "addition")), "sumMontant", array()), "html", null, true);
+        echo twig_escape_filter($this->env, twig_number_format_filter($this->env, $this->getAttribute(($context["addition"] ?? $this->getContext($context, "addition")), "sumMontant", array()), 2, ".", ""), "html", null, true);
         echo "</th>
     </tr>
   </tbody>
 
  <a href=\"";
         // line 42
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("add_day", array("idMonth" => ($context["idMonth"] ?? $this->getContext($context, "idMonth")), "month" => ($context["month"] ?? $this->getContext($context, "month")), "year" => ($context["year"] ?? $this->getContext($context, "year")), "idUser" => ($context["idUser"] ?? $this->getContext($context, "idUser")))), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("add_day", array("idMonth" => ($context["idMonth"] ?? $this->getContext($context, "idMonth")), "idUser" => ($context["idUser"] ?? $this->getContext($context, "idUser")))), "html", null, true);
         echo "\"> <button type=\"submit\" value=\"Ajouter\" type=\"button\" class=\"btn btn-success\">Add Day</button></a>
  <a href=\"";
         // line 43
@@ -138,7 +138,7 @@ class __TwigTemplate_1b6fb8868e8ed684c4a44bd212d12b926826ada3c934dedf77ba003d554
 
 ";
         
-        $__internal_f06dcc71c3b6e9fdd87279a5bff6092ffeed5a2119feff4347537590817582b6->leave($__internal_f06dcc71c3b6e9fdd87279a5bff6092ffeed5a2119feff4347537590817582b6_prof);
+        $__internal_9700ea416862ae66d7ab76c375b34142fcc1f1eede34602a33faf1a1452f994b->leave($__internal_9700ea416862ae66d7ab76c375b34142fcc1f1eede34602a33faf1a1452f994b_prof);
 
     }
 
@@ -195,7 +195,7 @@ class __TwigTemplate_1b6fb8868e8ed684c4a44bd212d12b926826ada3c934dedf77ba003d554
          {% endif %}
             <td>{{ day.nb_km }} KM</td>
             <td>{{ day.montant }} €</td>
-            <td> <a href=\"{{path('edit_day',{idDay:day.id,idMonth:idMonth,month:month,year:year,idUser:idUser})}}\" class=\"badge badge-secondary\"> Edit </a> </td>
+            <td> <a href=\"{{path('edit_day',{idDay:day.id,idMonth:idMonth,idUser:idUser})}}\" class=\"badge badge-secondary\"> Edit </a> </td>
         {% endif %}
       {% endfor %}
     </tr>
@@ -204,11 +204,11 @@ class __TwigTemplate_1b6fb8868e8ed684c4a44bd212d12b926826ada3c934dedf77ba003d554
       <th colspan=\"2\"> Sous-Total </th>
       <th colspan=\"1\"></th>
       <th>Total KM : {{addition.sumKM}}</th>
-      <th>Total Montant : {{addition.sumMontant}}</th>
+      <th>Total Montant : {{addition.sumMontant|number_format(2,'.','')}}</th>
     </tr>
   </tbody>
 
- <a href=\"{{path('add_day',{idMonth:idMonth,month:month,year:year,idUser:idUser})}}\"> <button type=\"submit\" value=\"Ajouter\" type=\"button\" class=\"btn btn-success\">Add Day</button></a>
+ <a href=\"{{path('add_day',{idMonth:idMonth,idUser:idUser})}}\"> <button type=\"submit\" value=\"Ajouter\" type=\"button\" class=\"btn btn-success\">Add Day</button></a>
  <a href=\"{{path('user_main_page',{id:idUser})}}\"> <button type=\"submit\" value=\"Ajouter\" type=\"button\" class=\"btn btn-primary\">Return</button></a>
 
 {% endblock body %}

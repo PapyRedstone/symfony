@@ -8,4 +8,8 @@
 
 <a href="{{path('user_main_page',{id:id})}}"> <button type="submit" value="Ajouter" type="button" class="btn btn-primary">Return</button></a>
 
+{% if message is defined%}
+  {{message}}
+{% endif %}
+
 {% endblock body %}

@@ -46,6 +46,17 @@ class __TwigTemplate_c2df3fc7b8efa34f6de142b880939a29b41737a76025705342b7dfc0559
         echo "\"> <button type=\"submit\" value=\"Ajouter\" type=\"button\" class=\"btn btn-primary\">Return</button></a>
 
 ";
+        // line 11
+        if (array_key_exists("message", $context)) {
+            // line 12
+            echo "  ";
+            echo twig_escape_filter($this->env, ($context["message"] ?? null), "html", null, true);
+            echo "
+";
+        }
+        // line 14
+        echo "
+";
     }
 
     public function getTemplateName()
@@ -60,7 +71,7 @@ class __TwigTemplate_c2df3fc7b8efa34f6de142b880939a29b41737a76025705342b7dfc0559
 
     public function getDebugInfo()
     {
-        return array (  45 => 9,  40 => 7,  35 => 5,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  58 => 14,  52 => 12,  50 => 11,  45 => 9,  40 => 7,  35 => 5,  31 => 4,  28 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * C'est le formulaire de la table User qui est spécifique au Front
+ *
+ * @author Lorens BARRAUD
+ * @version 1.0
+ *
+*/
+
 namespace FrontOfficeBundle\Form;
 
 use Symfony\Component\Form\AbstractType;

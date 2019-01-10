@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * C'est le fichier de l'entité Service.
+ *
+ * @author Lorens BARRAUD, Alexandre FEBVRE
+ * @version 1.0
+ *
+*/
+
 namespace WebServiceBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;

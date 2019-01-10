@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * C'est le formulaire pour la table Deplacement spécifique au BackOffice.
+ *
+ * @author Lorens BARRAUD
+ * @version 1.0
+ *
+*/
+
 namespace BackOfficeBundle\Form;
 
 use Symfony\Component\Form\AbstractType;

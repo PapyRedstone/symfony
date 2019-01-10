@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * C'est le contrôleur qui gére l'entité User pour le BackOffice
+ *
+ * @author Lorens BARRAUD
+ * @version 1.0
+ *
+*/
+
 namespace BackOfficeBundle\Controller;
 
 use WebServiceBundle\Entity\User;
@@ -44,7 +52,7 @@ class UserController extends Controller
 
             $user->setCreated($date);
             $user->setUpdated($date);
-            
+
             $em->persist($user);
             $em->flush($user);
 

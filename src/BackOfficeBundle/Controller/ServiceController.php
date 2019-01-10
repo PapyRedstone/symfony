@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * C'est le contrôleur qui gére l'entité Service pour le BackOffice
+ *
+ * @author Lorens BARRAUD
+ * @version 1.0
+ *
+*/
+
 namespace BackOfficeBundle\Controller;
 
 use WebServiceBundle\Entity\Service;

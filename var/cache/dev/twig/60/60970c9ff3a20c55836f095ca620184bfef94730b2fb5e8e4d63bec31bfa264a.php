@@ -21,20 +21,20 @@ class __TwigTemplate_06e103e93b45fbb7663d637170e6ddad022ddc6484420c3073a73f91730
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f0eaac178414247100674a5743057673dbe42315e74c2e4bbfc78b3031d9764a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_f0eaac178414247100674a5743057673dbe42315e74c2e4bbfc78b3031d9764a->enter($__internal_f0eaac178414247100674a5743057673dbe42315e74c2e4bbfc78b3031d9764a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontOfficeBundle:User:addDay.html.twig"));
+        $__internal_64f5e300cddad7d388f156f9f893b5c3ca3fd57e5c129581922372992ff4af0e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_64f5e300cddad7d388f156f9f893b5c3ca3fd57e5c129581922372992ff4af0e->enter($__internal_64f5e300cddad7d388f156f9f893b5c3ca3fd57e5c129581922372992ff4af0e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontOfficeBundle:User:addDay.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_f0eaac178414247100674a5743057673dbe42315e74c2e4bbfc78b3031d9764a->leave($__internal_f0eaac178414247100674a5743057673dbe42315e74c2e4bbfc78b3031d9764a_prof);
+        $__internal_64f5e300cddad7d388f156f9f893b5c3ca3fd57e5c129581922372992ff4af0e->leave($__internal_64f5e300cddad7d388f156f9f893b5c3ca3fd57e5c129581922372992ff4af0e_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_53ecd5b05d6f8a3e2a69874b734288612a1de230b2ab62068cfd9888f1776393 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_53ecd5b05d6f8a3e2a69874b734288612a1de230b2ab62068cfd9888f1776393->enter($__internal_53ecd5b05d6f8a3e2a69874b734288612a1de230b2ab62068cfd9888f1776393_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_653ed27067d71aedb30e101f7c20e49d9e025d30ebc76831a2a3de246ac4f499 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_653ed27067d71aedb30e101f7c20e49d9e025d30ebc76831a2a3de246ac4f499->enter($__internal_653ed27067d71aedb30e101f7c20e49d9e025d30ebc76831a2a3de246ac4f499_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "
@@ -54,12 +54,23 @@ class __TwigTemplate_06e103e93b45fbb7663d637170e6ddad022ddc6484420c3073a73f91730
 
 <a href=\"";
         // line 10
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("show_month", array("idMonth" => ($context["idMonth"] ?? $this->getContext($context, "idMonth")), "month" => ($context["month"] ?? $this->getContext($context, "month")), "year" => ($context["year"] ?? $this->getContext($context, "year")), "idUser" => ($context["idUser"] ?? $this->getContext($context, "idUser")))), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("show_month", array("idMonth" => ($context["idMonth"] ?? $this->getContext($context, "idMonth")), "idUser" => ($context["idUser"] ?? $this->getContext($context, "idUser")))), "html", null, true);
         echo "\"> <button type=\"submit\" value=\"Back\" type=\"button\" class=\"btn btn-primary\">Return</button></a>
 
 ";
+        // line 12
+        if (array_key_exists("message", $context)) {
+            // line 13
+            echo " ";
+            echo twig_escape_filter($this->env, ($context["message"] ?? $this->getContext($context, "message")), "html", null, true);
+            echo "
+ ";
+        }
+        // line 15
+        echo "
+";
         
-        $__internal_53ecd5b05d6f8a3e2a69874b734288612a1de230b2ab62068cfd9888f1776393->leave($__internal_53ecd5b05d6f8a3e2a69874b734288612a1de230b2ab62068cfd9888f1776393_prof);
+        $__internal_653ed27067d71aedb30e101f7c20e49d9e025d30ebc76831a2a3de246ac4f499->leave($__internal_653ed27067d71aedb30e101f7c20e49d9e025d30ebc76831a2a3de246ac4f499_prof);
 
     }
 
@@ -75,7 +86,7 @@ class __TwigTemplate_06e103e93b45fbb7663d637170e6ddad022ddc6484420c3073a73f91730
 
     public function getDebugInfo()
     {
-        return array (  57 => 10,  52 => 8,  47 => 6,  43 => 5,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  70 => 15,  64 => 13,  62 => 12,  57 => 10,  52 => 8,  47 => 6,  43 => 5,  40 => 4,  34 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -97,7 +108,11 @@ class __TwigTemplate_06e103e93b45fbb7663d637170e6ddad022ddc6484420c3073a73f91730
 <button type=\"submit\" value=\"Ajouter\" type=\"button\" class=\"btn btn-success\">Ajouter</button>
 {{ form_end(form) }}
 
-<a href=\"{{path('show_month',{idMonth:idMonth,month:month,year:year,idUser:idUser})}}\"> <button type=\"submit\" value=\"Back\" type=\"button\" class=\"btn btn-primary\">Return</button></a>
+<a href=\"{{path('show_month',{idMonth:idMonth,idUser:idUser})}}\"> <button type=\"submit\" value=\"Back\" type=\"button\" class=\"btn btn-primary\">Return</button></a>
+
+{% if message is defined %}
+ {{message}}
+ {% endif %}
 
 {% endblock body %}
 ", "FrontOfficeBundle:User:addDay.html.twig", "/var/www/html/symfony/src/FrontOfficeBundle/Resources/views/User/addDay.html.twig");

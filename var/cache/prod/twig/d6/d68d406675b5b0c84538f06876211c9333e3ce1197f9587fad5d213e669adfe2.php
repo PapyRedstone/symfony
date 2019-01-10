@@ -42,9 +42,20 @@ class __TwigTemplate_4f2adc2f548bf90f206c7f58afd0bc96bfdbe69dc91ca5a4cddfeed0889
 
 <a href=\"";
         // line 9
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("show_month", array("idMonth" => ($context["idMonth"] ?? null), "month" => ($context["month"] ?? null), "year" => ($context["year"] ?? null), "idUser" => ($context["idUser"] ?? null))), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("show_month", array("idMonth" => ($context["idMonth"] ?? null), "idUser" => ($context["idUser"] ?? null))), "html", null, true);
         echo "\"> <button type=\"submit\" value=\"Back\" type=\"button\" class=\"btn btn-primary\">Return</button></a>
 
+";
+        // line 11
+        if (array_key_exists("message", $context)) {
+            // line 12
+            echo "  ";
+            echo twig_escape_filter($this->env, ($context["message"] ?? null), "html", null, true);
+            echo "
+";
+        }
+        // line 14
+        echo "
 ";
     }
 
@@ -60,7 +71,7 @@ class __TwigTemplate_4f2adc2f548bf90f206c7f58afd0bc96bfdbe69dc91ca5a4cddfeed0889
 
     public function getDebugInfo()
     {
-        return array (  45 => 9,  40 => 7,  35 => 5,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  58 => 14,  52 => 12,  50 => 11,  45 => 9,  40 => 7,  35 => 5,  31 => 4,  28 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

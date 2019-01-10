@@ -21,20 +21,20 @@ class __TwigTemplate_82b104124b3091794a1b090b7f49ef6f2bcc9638ca94de187126adc942f
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_9513863df04392d73ebedab49be270b01c7474073a579833d9fb26435892d963 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_9513863df04392d73ebedab49be270b01c7474073a579833d9fb26435892d963->enter($__internal_9513863df04392d73ebedab49be270b01c7474073a579833d9fb26435892d963_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontOfficeBundle:User:addMonth.html.twig"));
+        $__internal_21c7fd1853f2e20a87c039c7b95e84a8f4da7a8ded433371447164b9174998da = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_21c7fd1853f2e20a87c039c7b95e84a8f4da7a8ded433371447164b9174998da->enter($__internal_21c7fd1853f2e20a87c039c7b95e84a8f4da7a8ded433371447164b9174998da_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontOfficeBundle:User:addMonth.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_9513863df04392d73ebedab49be270b01c7474073a579833d9fb26435892d963->leave($__internal_9513863df04392d73ebedab49be270b01c7474073a579833d9fb26435892d963_prof);
+        $__internal_21c7fd1853f2e20a87c039c7b95e84a8f4da7a8ded433371447164b9174998da->leave($__internal_21c7fd1853f2e20a87c039c7b95e84a8f4da7a8ded433371447164b9174998da_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_2dff862d4f6dd068b3e9cea812f21c901edb84494b889be1e59a1208e55c27ca = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_2dff862d4f6dd068b3e9cea812f21c901edb84494b889be1e59a1208e55c27ca->enter($__internal_2dff862d4f6dd068b3e9cea812f21c901edb84494b889be1e59a1208e55c27ca_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_c5c06e4ccf23049319df5a2f3e6cf8441e35c267a2b350fe2b2f1ef40997c9aa = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c5c06e4ccf23049319df5a2f3e6cf8441e35c267a2b350fe2b2f1ef40997c9aa->enter($__internal_c5c06e4ccf23049319df5a2f3e6cf8441e35c267a2b350fe2b2f1ef40997c9aa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo         $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_start');
@@ -55,8 +55,19 @@ class __TwigTemplate_82b104124b3091794a1b090b7f49ef6f2bcc9638ca94de187126adc942f
         echo "\"> <button type=\"submit\" value=\"Ajouter\" type=\"button\" class=\"btn btn-primary\">Return</button></a>
 
 ";
+        // line 11
+        if (array_key_exists("message", $context)) {
+            // line 12
+            echo "  ";
+            echo twig_escape_filter($this->env, ($context["message"] ?? $this->getContext($context, "message")), "html", null, true);
+            echo "
+";
+        }
+        // line 14
+        echo "
+";
         
-        $__internal_2dff862d4f6dd068b3e9cea812f21c901edb84494b889be1e59a1208e55c27ca->leave($__internal_2dff862d4f6dd068b3e9cea812f21c901edb84494b889be1e59a1208e55c27ca_prof);
+        $__internal_c5c06e4ccf23049319df5a2f3e6cf8441e35c267a2b350fe2b2f1ef40997c9aa->leave($__internal_c5c06e4ccf23049319df5a2f3e6cf8441e35c267a2b350fe2b2f1ef40997c9aa_prof);
 
     }
 
@@ -72,7 +83,7 @@ class __TwigTemplate_82b104124b3091794a1b090b7f49ef6f2bcc9638ca94de187126adc942f
 
     public function getDebugInfo()
     {
-        return array (  54 => 9,  49 => 7,  44 => 5,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  67 => 14,  61 => 12,  59 => 11,  54 => 9,  49 => 7,  44 => 5,  40 => 4,  34 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -94,6 +105,10 @@ class __TwigTemplate_82b104124b3091794a1b090b7f49ef6f2bcc9638ca94de187126adc942f
 {{ form_end(form) }}
 
 <a href=\"{{path('user_main_page',{id:id})}}\"> <button type=\"submit\" value=\"Ajouter\" type=\"button\" class=\"btn btn-primary\">Return</button></a>
+
+{% if message is defined%}
+  {{message}}
+{% endif %}
 
 {% endblock body %}
 ", "FrontOfficeBundle:User:addMonth.html.twig", "/var/www/html/symfony/src/FrontOfficeBundle/Resources/views/User/addMonth.html.twig");

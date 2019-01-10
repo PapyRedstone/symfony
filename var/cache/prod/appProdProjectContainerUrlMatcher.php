@@ -47,7 +47,7 @@ class appProdProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\R
         }
 
         // show_month
-        if (0 === strpos($pathinfo, '/show') && preg_match('#^/show/(?P<idMonth>\\d+)/(?P<month>\\d+)/(?P<year>\\d+)/(?P<idUser>\\d+)$#s', $pathinfo, $matches)) {
+        if (0 === strpos($pathinfo, '/show') && preg_match('#^/show/(?P<idMonth>\\d+)/(?P<idUser>\\d+)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'show_month')), array (  '_controller' => 'FrontOfficeBundle\\Controller\\UserController::showAction',));
         }
 
@@ -58,14 +58,14 @@ class appProdProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\R
             }
 
             // add_day
-            if (0 === strpos($pathinfo, '/addDay') && preg_match('#^/addDay/(?P<idMonth>\\d+)/(?P<month>\\d+)/(?P<year>\\d+)/(?P<idUser>\\d+)$#s', $pathinfo, $matches)) {
+            if (0 === strpos($pathinfo, '/addDay') && preg_match('#^/addDay/(?P<idMonth>\\d+)/(?P<idUser>\\d+)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'add_day')), array (  '_controller' => 'FrontOfficeBundle\\Controller\\UserController::addDayAction',));
             }
 
         }
 
         // edit_day
-        if (0 === strpos($pathinfo, '/editDay') && preg_match('#^/editDay/(?P<idDay>\\d+)/(?P<idMonth>\\d+)/(?P<month>\\d+)/(?P<year>\\d+)/(?P<idUser>\\d+)$#s', $pathinfo, $matches)) {
+        if (0 === strpos($pathinfo, '/editDay') && preg_match('#^/editDay/(?P<idDay>\\d+)/(?P<idMonth>\\d+)/(?P<idUser>\\d+)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'edit_day')), array (  '_controller' => 'FrontOfficeBundle\\Controller\\UserController::editDayAction',));
         }
 

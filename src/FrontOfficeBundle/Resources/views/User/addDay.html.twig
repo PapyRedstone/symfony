@@ -7,6 +7,10 @@
 <button type="submit" value="Ajouter" type="button" class="btn btn-success">Ajouter</button>
 {{ form_end(form) }}
 
-<a href="{{path('show_month',{idMonth:idMonth,month:month,year:year,idUser:idUser})}}"> <button type="submit" value="Back" type="button" class="btn btn-primary">Return</button></a>
+<a href="{{path('show_month',{idMonth:idMonth,idUser:idUser})}}"> <button type="submit" value="Back" type="button" class="btn btn-primary">Return</button></a>
+
+{% if message is defined %}
+ {{message}}
+ {% endif %}
 
 {% endblock body %}

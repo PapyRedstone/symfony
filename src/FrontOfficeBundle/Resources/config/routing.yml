@@ -15,12 +15,10 @@ edit_profil:
       id: '\d+'
 
 show_month:
-    path:     /show/{idMonth}/{month}/{year}/{idUser}
+    path:     /show/{idMonth}/{idUser}
     defaults:  { _controller: FrontOfficeBundle:User:show }
     requirements:
       idMonth: '\d+'
-      month: '\d+'
-      year: '\d+'
       idUser: '\d+'
 
 add_month:
@@ -30,20 +28,16 @@ add_month:
       id: '\d+'
 
 add_day:
-    path : /addDay/{idMonth}/{month}/{year}/{idUser}
+    path : /addDay/{idMonth}/{idUser}
     defaults:  { _controller: FrontOfficeBundle:User:addDay }
     requirements:
       idMonth: '\d+'
-      month: '\d+'
-      year: '\d+'
       idUser: '\d+'
 
 edit_day:
-    path : /editDay/{idDay}/{idMonth}/{month}/{year}/{idUser}
+    path : /editDay/{idDay}/{idMonth}/{idUser}
     defaults:  { _controller: FrontOfficeBundle:User:editDay }
     requirements:
       idDay: '\d+'
       idMonth: '\d+'
-      month: '\d+'
-      year: '\d+'
       idUser: '\d+'

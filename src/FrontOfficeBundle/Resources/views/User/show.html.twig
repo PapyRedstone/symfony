@@ -26,7 +26,7 @@
          {% endif %}
             <td>{{ day.nb_km }} KM</td>
             <td>{{ day.montant }} €</td>
-            <td> <a href="{{path('edit_day',{idDay:day.id,idMonth:idMonth,month:month,year:year,idUser:idUser})}}" class="badge badge-secondary"> Edit </a> </td>
+            <td> <a href="{{path('edit_day',{idDay:day.id,idMonth:idMonth,idUser:idUser})}}" class="badge badge-secondary"> Edit </a> </td>
         {% endif %}
       {% endfor %}
     </tr>
@@ -35,11 +35,11 @@
       <th colspan="2"> Sous-Total </th>
       <th colspan="1"></th>
       <th>Total KM : {{addition.sumKM}}</th>
-      <th>Total Montant : {{addition.sumMontant}}</th>
+      <th>Total Montant : {{addition.sumMontant|number_format(2,'.','')}}</th>
     </tr>
   </tbody>
 
- <a href="{{path('add_day',{idMonth:idMonth,month:month,year:year,idUser:idUser})}}"> <button type="submit" value="Ajouter" type="button" class="btn btn-success">Add Day</button></a>
+ <a href="{{path('add_day',{idMonth:idMonth,idUser:idUser})}}"> <button type="submit" value="Ajouter" type="button" class="btn btn-success">Add Day</button></a>
  <a href="{{path('user_main_page',{id:idUser})}}"> <button type="submit" value="Ajouter" type="button" class="btn btn-primary">Return</button></a>
 
 {% endblock body %}

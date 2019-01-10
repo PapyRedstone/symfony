@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * C'est le répertoire de méthode pour de l'entité Societe.
+ *
+ * @author Lorens BARRAUD
+ * @version 1.0
+ *
+*/
+
 namespace WebServiceBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;

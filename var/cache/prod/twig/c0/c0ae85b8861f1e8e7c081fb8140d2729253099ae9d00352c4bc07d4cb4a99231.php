@@ -86,7 +86,7 @@ class __TwigTemplate_9161e06698e2977e5b2cf80a9d3c65f17103265ca36f0c896a3e8169ed8
                     echo " €</td>
             <td> <a href=\"";
                     // line 29
-                    echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("edit_day", array("idDay" => $this->getAttribute($context["day"], "id", array()), "idMonth" => ($context["idMonth"] ?? null), "month" => ($context["month"] ?? null), "year" => ($context["year"] ?? null), "idUser" => ($context["idUser"] ?? null))), "html", null, true);
+                    echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("edit_day", array("idDay" => $this->getAttribute($context["day"], "id", array()), "idMonth" => ($context["idMonth"] ?? null), "idUser" => ($context["idUser"] ?? null))), "html", null, true);
                     echo "\" class=\"badge badge-secondary\"> Edit </a> </td>
         ";
                 }
@@ -113,14 +113,14 @@ class __TwigTemplate_9161e06698e2977e5b2cf80a9d3c65f17103265ca36f0c896a3e8169ed8
         echo "</th>
       <th>Total Montant : ";
         // line 38
-        echo twig_escape_filter($this->env, $this->getAttribute(($context["addition"] ?? null), "sumMontant", array()), "html", null, true);
+        echo twig_escape_filter($this->env, twig_number_format_filter($this->env, $this->getAttribute(($context["addition"] ?? null), "sumMontant", array()), 2, ".", ""), "html", null, true);
         echo "</th>
     </tr>
   </tbody>
 
  <a href=\"";
         // line 42
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("add_day", array("idMonth" => ($context["idMonth"] ?? null), "month" => ($context["month"] ?? null), "year" => ($context["year"] ?? null), "idUser" => ($context["idUser"] ?? null))), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("add_day", array("idMonth" => ($context["idMonth"] ?? null), "idUser" => ($context["idUser"] ?? null))), "html", null, true);
         echo "\"> <button type=\"submit\" value=\"Ajouter\" type=\"button\" class=\"btn btn-success\">Add Day</button></a>
  <a href=\"";
         // line 43

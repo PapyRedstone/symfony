@@ -1,4 +1,13 @@
 <?php
+
+/**
+ * C'est le répertoire de méthode pour de l'entité Deplacement.
+ *
+ * @author Lorens BARRAUD
+ * @version 1.0
+ *
+*/
+
 namespace WebServiceBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
@@ -39,7 +48,7 @@ class DeplacementRepository extends EntityRepository{
 
     public function findAllMonth($idUser){
       $conn=$this->getEntityManager()->getConnection();
-      $sql='SELECT * FROM deplacement WHERE user_id=:id ORDER BY annee DESC';
+      $sql='SELECT * FROM deplacement WHERE user_id=:id ORDER BY annee,mois ASC';
       $stmt=$conn->prepare($sql);
       $stmt->bindParam(':id', $idUser);
       $stmt->execute();
