@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * DeplacementJour
  *
  * @ORM\Table(name="deplacement_jour", indexes={@ORM\Index(name="fk_deplacement_jour_type_deplacement1_idx", columns={"type_deplacement_id"}), @ORM\Index(name="fk_deplacement_jour_deplacement1_idx", columns={"deplacement_id"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="WebServiceBundle\Repository\DeplacementJourRepository")
  */
 class DeplacementJour
 {
@@ -82,16 +82,6 @@ class DeplacementJour
      * })
      */
     private $typeDeplacement;
-
-    /**
-      * @var \User
-      *
-      * @ORM\ManyToOne(targetEntity="User")
-      * @ORM\JoinColumns({
-      *      @ORM\JoinColumn(name="User_id",referencedColumnName="id")
-      * })
-      */
-  private $UserId;
 
     /**
      * Get id

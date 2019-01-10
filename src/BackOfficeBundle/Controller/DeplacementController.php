@@ -33,17 +33,9 @@ class DeplacementController extends Controller
       $months=$em->getRepository("WebServiceBundle:User")->findAllMonth($id);
     }
 
-    $i=0;
-
-    foreach($months as $month){
-      $nameMonths[$i]=date('F',mktime(0,0,0,$month["mois"]+1,0,0));
-      $i++;
-    }
-
     return $this->render('BackOfficeBundle:Deplacement:show.html.twig',[
       'months' => $months,
       'id' => $id,
-      'nameMonths'=>$nameMonths,
     ]);
   }
 

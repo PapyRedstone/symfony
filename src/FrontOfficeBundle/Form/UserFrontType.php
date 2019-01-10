@@ -22,7 +22,7 @@ class UserFrontType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'WebServiceBundle\Entity\UserFront'
+            'data_class' => 'WebServiceBundle\Entity\User'
         ));
     }
 

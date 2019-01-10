@@ -6,32 +6,6 @@ use Doctrine\ORM\EntityRepository;
 use Doctrine\DBAL\Statement;
 
 class userRepository extends EntityRepository{
-    public function findAllMonth($idUser){
-      $conn=$this->getEntityManager()->getConnection();
-      $sql='SELECT * FROM deplacement WHERE user_id=:id';
-      $stmt=$conn->prepare($sql);
-      $stmt->bindParam(':id', $idUser);
-      $stmt->execute();
-      return $stmt->fetchAll();
-    }
-
-    public function findAllMonths(){
-      $conn=$this->getEntityManager()->getConnection();
-      $sql='SELECT * FROM deplacement ';
-      $stmt=$conn->prepare($sql);
-      $stmt->execute();
-      return $stmt->fetchAll();
-    }
-
-    public function findSociety($idUser){
-      $conn=$this->getEntityManager()->getConnection();
-      $sql='SELECT societe.societe FROM societe,user WHERE user.id=:id AND user.societe_id=societe.id';
-      $stmt=$conn->prepare($sql);
-      $stmt->bindParam(':id', $idUser);
-      $stmt->execute();
-      return $stmt->fetchAll();
-    }
-
     public function findCity($idUser){
       $conn=$this->getEntityManager()->getConnection();
       $sql='SELECT ville.ville FROM ville,user WHERE user.id=:id AND user.ville_id=ville.id';
@@ -41,24 +15,29 @@ class userRepository extends EntityRepository{
       return $stmt->fetchAll();
     }
 
-    public function findAllDays($idUser,$month,$year){
+    public function findAllDays($idMonth){
       $conn=$this->getEntityManager()->getConnection();
-      $sql='SELECT * FROM deplacement,user,deplacement_jour WHERE user.id=:id AND deplacement.mois=:month AND deplacement.annee=:year AND user.id=deplacement.user_id AND deplacement.id=deplacement_jour.deplacement_id ';
+      $sql='SELECT * FROM deplacement_jour WHERE deplacement_id=:id ';
       $stmt=$conn->prepare($sql);
-      $stmt->bindParam(':id', $idUser);
-      $stmt->bindParam(':month', $month);
-      $stmt->bindParam(':year', $year);
+      $stmt->bindParam(':id', $idMonth);
       $stmt->execute();
       return $stmt->fetchAll();
     }
 
-    public function sumEuroAndKM($id,$month,$year){
+    public function sumEuroAndKM($idMonth){
       $conn=$this->getEntityManager()->getConnection();
-      $sql='SELECT sum(deplacement_jour.montant) sumMontant ,sum(deplacement_jour.nb_km) sumKM FROM deplacement,user,deplacement_jour WHERE user.id=:id AND deplacement.mois=:month AND deplacement.annee=:year AND user.id=deplacement.user_id AND deplacement.id=deplacement_jour.deplacement_id ';
+      $sql='SELECT sum(deplacement_jour.montant) sumMontant ,sum(deplacement_jour.nb_km) sumKM FROM deplacement_jour WHERE deplacement_jour.deplacement_id=:id ';
       $stmt=$conn->prepare($sql);
-      $stmt->bindParam(':id', $idUser);
-      $stmt->bindParam(':month', $month);
-      $stmt->bindParam(':year', $year);
+      $stmt->bindParam(':id', $idMonth);
+      $stmt->execute();
+      return $stmt->fetchAll();
+    }
+
+    public function getValueKM($id){
+      $conn=$this->getEntityManager()->getConnection();
+      $sql='SELECT montant FROM type_deplacement WHERE id=:id ';
+      $stmt=$conn->prepare($sql);
+      $stmt->bindParam(':id', $id);
       $stmt->execute();
       return $stmt->fetchAll();
     }

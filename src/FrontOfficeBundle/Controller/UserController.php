@@ -8,51 +8,47 @@ use Symfony\Component\Validator\Constraints\DateTime;
 use Doctrine\ORM\EntityManagerInterface;
 use WebServiceBundle\Entity\UserFront;
 use WebServiceBundle\Entity\Deplacement;
+use WebServiceBundle\Entity\DeplacementJour;
+use WebServiceBundle\Entity\TypeDeplacement;
 use WebServiceBundle\Repository\userRepository;
 use FrontOfficeBundle\Form\UserFrontType;
 use FrontOfficeBundle\Form\DeplacementType;
+use FrontOfficeBundle\Form\DeplacementJourType;
 
 class UserController extends Controller
 {
   public function profilAction($id){
     $em=$this->get('doctrine')->getManager();
     $user=$em->getRepository("WebServiceBundle:User")->findOneById($id);
-    $months=$em->getRepository("WebServiceBundle:User")->findAllMonth($id);
-    $i=0;
-    foreach($months as $month){
-      $nameMonths[$i]=date('F',mktime(0,0,0,$month["mois"]+1,0,0));
-      $i++;
-    }
+    $months=$em->getRepository("WebServiceBundle:Deplacement")->findAllMonth($id);
 
-    $society=$em->getRepository("WebServiceBundle:User")->findSociety($id);
+    $society=$em->getRepository("WebServiceBundle:Societe")->findSociety($id);
     $city=$em->getRepository("WebServiceBundle:User")->findCity($id);
     return $this->render('FrontOfficeBundle:User:profil.html.twig',[
       'user' => $user,
       'societies' => $society,
       'months'=> $months,
       'cities'=> $city,
-      'nameMonths' => $nameMonths,
     ]);
   }
 
-  public function showAction($id,$month,$year){
-    setlocale (LC_TIME, 'fr_FR','fra');
-    date_default_timezone_set("Europe/Paris");
-    mb_internal_encoding("UTF-8");
+  public function showAction($idMonth,$month,$year,$idUser){
     $em=$this->get('doctrine')->getManager();
-    $day=$em->getRepository("WebServiceBundle:User")->findAllDays($id,$month,$year);
-    $addition=$em->getRepository("WebServiceBundle:User")->sumEuroAndKM($id,$month,$year);
+    $day=$em->getRepository("WebServiceBundle:User")->findAllDays($idMonth,$month,$year);
+    $addition=$em->getRepository("WebServiceBundle:User")->sumEuroAndKM($idMonth);
     $nbdays=date('t',mktime(0, 0, 0, $month, 1, $year));
     for($i=0;$i<$nbdays;$i++){
       $monthdays[$i]=strftime("%A",mktime(0,0,0,$month,$i+1,$year));
     }
     return $this->render('FrontOfficeBundle:User:show.html.twig',[
-      'addition' =>$addition,
+      'month' => $month,
+      'year' => $year,
+      'addition' =>$addition[0],
       'days' => $day,
       'monthdays' => $monthdays,
       'nbdays' => $nbdays,
-      'month' => $month,
-      'year' => $year,
+      'idMonth' =>  $idMonth,
+      'idUser'=> $idUser,
     ]);
   }
 
@@ -66,20 +62,79 @@ class UserController extends Controller
     $form->handleRequest($request);
 
     if($form->isSubmitted() && $form->isValid()){
-      $deplacement->setUser($user);
-      $deplacement->setCreated($date);
-      $deplacement->setUpdated($date);
+      $verifMonth = $em->getRepository('WebServiceBundle:Deplacement')->verifyMonth($deplacement->getMois(),$deplacement->getAnnee(),$id);
 
-      $em->persist($deplacement);
-      $em->flush($deplacement);
+      if($verifMonth[0]['nb_mois']==0){
+        $deplacement->setUser($user);
+        $deplacement->setCreated($date);
+        $deplacement->setUpdated($date);
 
-      return $this->redirectToRoute('user_main_page',array(
-        'id'=>$id
-      ));
+        $em->persist($deplacement);
+        $em->flush($deplacement);
+
+        return $this->redirectToRoute('user_main_page',array(
+          'id'=>$id
+        ));
+      }
+      else{
+        return $this->redirectToRoute('user_main_page',array(
+          'id'=>$id
+        ));
+      }
     }
-
     return $this->render('FrontOfficeBundle:User:addMonth.html.twig', array(
-      'form' => $form->createView()
+      'form' => $form->createView(),
+      'id'=>$id,
+    ));
+  }
+
+  public function addDayAction(Request $request,$idMonth,$month,$year,$idUser){
+    $em=$this->get('doctrine')->getManager();
+    $date = new \DateTime(date('Y-m-d H:i:s'));
+    $deplacement = new Deplacement();
+    $day = new DeplacementJour();
+    $typeDeplacement = new TypeDeplacement();
+    $deplacement = $em->getRepository('WebServiceBundle:Deplacement')->findOneById((int)$idMonth);
+    $typeDeplacement = $em->getRepository('WebServiceBundle:TypeDeplacement')->findOneById(1);
+    $form = $this->createForm('FrontOfficeBundle\Form\DeplacementJourType',$day);
+    $form->handleRequest($request);
+
+    if($form->isSubmitted() && $form->isValid()){
+      $verifDay = $em->getRepository('WebServiceBundle:DeplacementJour')->verifyDay($day->getJour(),$idMonth);
+
+      if(intval($verifDay[0]['nb_jour'])==0){
+        $day->setDeplacement($deplacement);
+        $day->setCreated($date);
+        $day->setUpdated($date);
+        $day->setTypeDeplacement($typeDeplacement);
+        $day->setMontant($day->getNbKm()*$typeDeplacement->getMontant());
+
+        $em->persist($day);
+        $em->flush($day);
+
+        return $this->redirectToRoute('show_month',array(
+          'idMonth'=>$deplacement->getId(),
+          'month'=>$deplacement->getMois(),
+          'year'=>$deplacement->getAnnee(),
+          'idUser'=>$idUser,
+        ));
+      }
+
+      else{
+        return $this->redirectToRoute('show_month',array(
+          'idMonth'=>$deplacement->getId(),
+          'month'=>$deplacement->getMois(),
+          'year'=>$deplacement->getAnnee(),
+          'idUser'=>$idUser,
+        ));
+      }
+    }
+    return $this->render('FrontOfficeBundle:User:addMonth.html.twig', array(
+      'form' => $form->createView(),
+      'idMonth'=>$idMonth,
+      'month'=>$month,
+      'year'=>$year,
+      'idUser'=>$idUser,
     ));
   }
 
@@ -87,12 +142,13 @@ class UserController extends Controller
     $em = $this->get('doctrine')->getManager();
     $user=$em->getRepository('WebServiceBundle:User')->find($id);
     $date = new \DateTime(date('Y-m-d H:i:s'));
-    $user->setUpdated($date);
     $form = $this->createForm('FrontOfficeBundle\Form\UserFrontType',$user);
     $form->handleRequest($request);
 
     if($form->isSubmitted() && $form->isValid()){
+      $user->setUpdated($date);
       $em=$this->getDoctrine()->getManager();
+
       $em->persist($user);
       $em->flush($user);
 
@@ -103,7 +159,42 @@ class UserController extends Controller
 
     return $this->render('FrontOfficeBundle:User:editProfil.html.twig', array(
       'form' => $form->createView(),
+      'id'=>$id,
     ));
   }
 
+  public function editDayAction($idDay,$idMonth,$month,$year,$idUser,Request $request){
+    $em = $this->get('doctrine')->getManager();
+    $day=$em->getRepository('WebServiceBundle:DeplacementJour')->find($idDay);
+    $date = new \DateTime(date('Y-m-d H:i:s'));
+    $typeDeplacement = new TypeDeplacement();
+    $form = $this->createForm('FrontOfficeBundle\Form\DeplacementJourType',$day);
+    $typeDeplacement = $em->getRepository('WebServiceBundle:TypeDeplacement')->findOneById(1);
+    $form->handleRequest($request);
+
+    if($form->isSubmitted() && $form->isValid()){
+      $day->setUpdated($date);
+      $day->setMontant($day->getNbKm()*$typeDeplacement->getMontant());
+
+      $em=$this->getDoctrine()->getManager();
+
+      $em->persist($day);
+      $em->flush($day);
+
+      return $this->redirectToRoute('show_month',array(
+        'idMonth'=>$idMonth,
+        'month'=>$month,
+        'year'=>$year,
+        'idUser'=>$idUser
+      ));
+    }
+
+    return $this->render('FrontOfficeBundle:User:editProfil.html.twig', array(
+      'form' => $form->createView(),
+      'idMonth'=>$idMonth,
+      'month'=>$month,
+      'year'=>$year,
+      'idUser'=>$idUser,
+    ));
+  }
 }

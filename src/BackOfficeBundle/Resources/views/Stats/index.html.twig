@@ -3,6 +3,8 @@
 {% block body %}
     <h2 class="blue">Stats</h2>
 
+    <h3 class="blue">Nombre d'utilisateurs par ville</h3>
+
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -20,20 +22,71 @@
         </tbody>
     </table>
 
+    <h3 class="blue">Nombre de km par société </h3>
+
     <table class="table table-bordered">
         <thead>
             <tr>
                 <th scope="col">Societe</th>
                 <th scope="col">KM</th>
-                <th scope="col">User</th>
             </tr>
         </thead>
         <tbody>
           {% for kilom in kilometers %}
             <tr>
                 <td>{{ kilom.societe }}</td>
-                <td>{{ kilom.nb_km }}</td>
+                {% if kilom.nbre_km %}
+                <td> {{ kilom.nbre_km }} </td>
+                {% endif %}
+                {% if kilom.nbre_km == null %}
+                <td> 0 </td>
+                {% endif %}
             </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+
+    <h3 class="blue">Nombre d'utilisateurs par société</h3>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Societe</th>
+                <th scope="col">User</th>
+            </tr>
+        </thead>
+        <tbody>
+          {% for user in users %}
+            <tr>
+                <td>{{ user.societe }}</td>
+                <td>{{ user.nbre_user }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+
+    <h3 class="blue">Nombre de km par mois par utilisateurs par société sur l'année en cours</h3>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">User</th>
+                <th scope="col">Mois</th>
+                <th scope="col">KM</th>
+            </tr>
+        </thead>
+        <tbody>
+          {% for last in lasts %}
+            <tr>
+                <td>{{ last.nom }}</td>
+                <td>{{ last.mois }}</td>
+                {% if last.km %}
+                <td> {{ last.km }} </td>
+                {% endif %}
+                {% if last.km == null %}
+                <td> 0 </td>
+                {% endif %}
+           </tr>
           {% endfor %}
         </tbody>
     </table>

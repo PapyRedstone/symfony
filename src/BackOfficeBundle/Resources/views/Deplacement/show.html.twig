@@ -12,17 +12,26 @@
             </tr>
         </thead>
         <tbody>
-        {% for i in 0..(nameMonths|length)-1 %}
+        {% for month in months %}
             <tr>
-                <td>{{ months[i].annee }}</td>
-                <td>{{ nameMonths[i]}}</td>
-                {% if months[i].validation == 1 %}
+                <td>{{ month.annee }}</td>
+                <td>{{ month.mois}}</td>
+                {% if month.validation == 1 %}
                   <td>Oui</td>
                 {% endif %}
-                {% if months[i].validation == 0 %}
+                {% if month.validation == 0 %}
                   <td>Non</td>
                 {% endif %}
-                <td> <a href="{{path('back_office_deplacement_detail',{idUser:id,idMonth:months[i].id})}}" class="badge badge-primary"> Detail </a> </td>
+                {% if id != 1 %}
+                <td>
+                    <a href="{{path('back_office_deplacement_detail',{idUser:id,idMonth:month.id})}}" class="badge badge-primary"> Detail </a>
+                </td>
+                {% endif %}
+                {% if id == 1 %}
+                <td>
+                    <a href="{{path('back_office_deplacement_detail',{idUser:id,idMonth:month.id})}}" class="badge badge-primary"> Change state </a>
+                </td>
+                {% endif %}
             </tr>
         {% endfor %}
         </tbody>

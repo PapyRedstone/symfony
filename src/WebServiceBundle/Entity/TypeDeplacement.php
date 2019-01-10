@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * TypeDeplacement
  *
  * @ORM\Table(name="type_deplacement")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="WebServiceBundle\Repository\DeplacementJourRepository")
  */
 class TypeDeplacement
 {

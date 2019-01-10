@@ -63,13 +63,15 @@
 		</tr>
 	</thead>
 	<tbody>
-		{% for i in 0..(nameMonths|length)-1 %}
+		{% for month in months %}
 		<tr>
-			<td>{{nameMonths[i]}}</td>
-			<td>{{months[i].annee}}</td>
-			<td>
-				<a href="{{path('show_month',{id:user.id,month:months[i].mois,year:months[i].annee})}}" class="badge badge-primary">Voir mois</a>
-			</td>
+				<td>{{month.mois}}</td>
+				<td>{{month.annee}}</td>
+		{% if month.validation == 0 %}
+				<td>
+					<a href="{{path('show_month',{idMonth:month.id,month:month.mois,year:month.annee,idUser:user.id})}}" class="badge badge-primary">Voir mois</a>
+				</td>
+			{% endif %}
 		</tr>
 		{% endfor %}
 	</tbody>

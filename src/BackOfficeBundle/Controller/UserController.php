@@ -37,9 +37,14 @@ class UserController extends Controller
         $user = new User();
         $form = $this->createForm('BackOfficeBundle\Form\UserType', $user);
         $form->handleRequest($request);
+        $date = new \DateTime(date('Y-m-d H:i:s'));
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+
+            $user->setCreated($date);
+            $user->setUpdated($date);
+            
             $em->persist($user);
             $em->flush($user);
 
@@ -72,11 +77,13 @@ class UserController extends Controller
      */
     public function editAction(Request $request, User $user)
     {
+        $date = new \DateTime(date('Y-m-d H:i:s'));
         $deleteForm = $this->createDeleteForm($user);
         $editForm = $this->createForm('BackOfficeBundle\Form\UserType', $user);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
+            $user->setUpdated($date);
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('back_office_user_edit', array('id' => $user->getId()));

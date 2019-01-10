@@ -1,12 +1,12 @@
 {% extends 'FrontOfficeBundle::base.html.twig' %}
 
 {% block body %}
+
 <table class="table table-bordered">
   <thead>
     <tr>
       <th scope="col" colspan="2">Date</th>
       <th scope="col">Utilisation du vélo</th>
-      <th scope="col">Aller-retour ?</th>
       <th scope="col">Nb Kilomètres en vélo</th>
       <th scope="col">Indémnisation</th>
     </tr>
@@ -18,19 +18,28 @@
       <td>{{i}}</td>
       {% for day in days %}
         {% if day.jour == i %}
-          <td> Oui </td>
-          <td> Oui </td>
-          <td>{{ day.nb_km }} KM</td>
-          <td>{{ day.montant }} €</td>
+         {% if day.type_deplacement_id == 1 %}
+            <td> Oui </td>
+         {% endif %}
+         {% if day.type_deplacement_id != 1 %}
+            <td> Non </td>
+         {% endif %}
+            <td>{{ day.nb_km }} KM</td>
+            <td>{{ day.montant }} €</td>
+            <td> <a href="{{path('edit_day',{idDay:day.id,idMonth:idMonth,month:month,year:year,idUser:idUser})}}" class="badge badge-secondary"> Edit </a> </td>
         {% endif %}
       {% endfor %}
     </tr>
     {% endfor %}
     <tr>
       <th colspan="2"> Sous-Total </th>
-      <th colspan="2"></th>
-      {{dump(addition)}}
+      <th colspan="1"></th>
+      <th>Total KM : {{addition.sumKM}}</th>
+      <th>Total Montant : {{addition.sumMontant}}</th>
     </tr>
   </tbody>
+
+ <a href="{{path('add_day',{idMonth:idMonth,month:month,year:year,idUser:idUser})}}"> <button type="submit" value="Ajouter" type="button" class="btn btn-success">Add Day</button></a>
+ <a href="{{path('user_main_page',{id:idUser})}}"> <button type="submit" value="Ajouter" type="button" class="btn btn-primary">Return</button></a>
 
 {% endblock body %}
