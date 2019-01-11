@@ -55,14 +55,6 @@ class DeplacementRepository extends EntityRepository{
       return $stmt->fetchAll();
     }
 
-    public function findAllMonths(){
-      $conn=$this->getEntityManager()->getConnection();
-      $sql='SELECT * FROM deplacement ';
-      $stmt=$conn->prepare($sql);
-      $stmt->execute();
-      return $stmt->fetchAll();
-    }
-
     public function verifyMonth($month,$year,$id){
       $conn=$this->getEntityManager()->getConnection();
       $sql='SELECT COUNT(mois) nb_mois FROM deplacement WHERE mois=:month AND annee=:year AND user_id=:id';

@@ -36,9 +36,9 @@ class DeplacementController extends Controller
     $em=$this->get('doctrine')->getManager();
 
     if($id==1){
-      $months=$em->getRepository("WebServiceBundle:User")->findAllMonths();
+      $months=$em->getRepository("WebServiceBundle:Deplacement")->findAll();
     } else {
-      $months=$em->getRepository("WebServiceBundle:User")->findAllMonth($id);
+      $months=$em->getRepository("WebServiceBundle:Deplacement")->findAllMonth($id);
     }
 
     return $this->render('BackOfficeBundle:Deplacement:show.html.twig',[
@@ -82,5 +82,4 @@ class DeplacementController extends Controller
       'idUser' => $idUser,
     ]);
   }
-
 }

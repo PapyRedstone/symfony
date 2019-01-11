@@ -1,0 +1,37 @@
+Pour le BackOffice : 
+	Controller Default :
+		- /admindep
+	Controller User :
+		- /admindep/user/
+		- /admindep/user/{id}/show
+		- /admindep/user/{id}/movement
+		- /admindep/user/new
+		- /admindep/user/{id}/edit
+		- /admindep/user/{id}/delete
+	Controller Societe :
+		- /admindep/societe
+		- /admindep/societe{id}/show
+		- /admindep/societe/new
+		- /admindep/societe/{id}/edit
+		- /admindep/societe/{id}/delete
+	Controller Service :
+		- /admindep/service
+		- /admindep/service/{id}/show
+		- /admindep/service/new
+		- /admindep/service/{id}/edit
+		- /admindep/service/{id}/delete
+	Controller Deplacement :
+		- /admindep/deplacement
+		- /admindep/deplacement/show/{id}
+		- /admindep/detail/{idUser}/{idMonth}
+	Controller Stats : 
+		- /admindep/stats
+
+Pour le FrontOffice : 
+	Controller User :
+		- /profil/{id}
+		- /editProfil/{id}
+		- /show/{idMonth}/{idUser}
+		- /addMonth/{id}
+		- /addDay/{idMonth}/{idUser}
+		- /editDay/{idDay}/{idMonth}/{idUser}

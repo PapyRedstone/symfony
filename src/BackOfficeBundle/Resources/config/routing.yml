@@ -84,7 +84,6 @@ back_office_service_delete:
     defaults: { _controller: BackOfficeBundle:Service:delete }
     methods:  DELETE
 
-
 back_office_deplacement_index:
     path:     /deplacement
     defaults: { _controller: BackOfficeBundle:Deplacement:index}
